@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Мария Аникина](https://up.htmlacademy.ru/adaptive/11/user/31198).
-* Наставник: Евгений карпов.
+* Наставник: Евгений Kарпов.
 
 ---
 
