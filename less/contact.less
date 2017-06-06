@@ -1,0 +1,30 @@
+.contact-info { display: flex; flex-direction: column;}
+.contact-info_item { display: flex; margin-bottom: 40px; }
+.contact-info_item-label { flex-basis: 80px; flex-shrink: 0;}
+.contact-info_item-text { flex-grow: 1; }
+.contact_map  { background: url(../img/map-mobile@1x.jpg) no-repeat center; height: 460px;}
+.contact-info_item-text--mail { text-decoration: none; color: #444;  }
+.contact-info_item-text--mail span { display: inline-block; border-bottom: 1px solid #62d1ba;}
+.contact .main-section_title { font-size: 18px; }
+.btn-contact { margin-bottom: 40px; }
+
+@media(min-width: 320px) {
+	.contact_map { margin: 0px -30px 40px; }
+}
+@media(min-width: 991px) {
+	.contact .main-section_title { 
+		font-size: 43px; 
+		line-height: 50px;
+	}
+	.contact-info {
+		flex-direction: row;
+	}
+	.contact-info_item {
+		width: 50%;
+	}
+
+}
+@media(min-width: 1200px) {
+	.contact .main-section_title { font-size: 53px; line-height: 57px;}
+
+}

@@ -1,0 +1,24 @@
+.form-input { display: flex; flex-direction: column; }
+.form-input_name { font-size: 17px; color: #000; font-weight: 700; }
+.input-text { height: 40px; line-height: 24px; border: none; border-bottom: 2px solid #000; }
+
+
+/*.form_group--dark { background: #f1f1f1 }*/
+.form_title { color: #63d1bb; text-transform: uppercase; font-weight: 700; margin-bottom: 20px; }
+
+.form-check { position: relative; min-height: 40px; margin-bottom: 20px;}
+.form-check input { position: absolute; top: 0; left: 0; }
+.form-check label {  position: relative; padding-left: 60px; color: #000; font-weight: 700; font-size: 17px;}
+.form-check label:before { content: ""; position: absolute;  top: -5px; left: 0; width: 40px; height: 40px; box-sizing: border-box; border: 2px solid #444; }
+
+.form-radio { position: relative; min-height: 40px; margin-bottom: 20px;}
+.form-radio input { position: absolute; top: 0; left: 0; opacity: 0;}
+.form-radio label { position: relative; padding-left: 60px; color: #000; font-weight: 700; font-size: 17px;}
+.form-radio label:before { content: ""; border-radius: 50%; top: -5px; left: 0; position: absolute; width: 40px; height: 40px; box-sizing: border-box; border: 2px solid #444; }
+.form-radio input:checked+label:after { content: ""; width: 16px; height: 16px; position: absolute; top: 7px; left: 12px; border-radius: 50%; background: #63d1bb; } 
+.form-input { margin-bottom: 20px; }
+
+
+@media(min-width: 320px) {
+	.form p { font-size: 13px;  }
+}
