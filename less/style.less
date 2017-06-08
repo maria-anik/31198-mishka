@@ -1,5 +1,9 @@
-
 /*FOR All*/
+/*base.less*/
+@import "base.less";
+
+/*btn.less*/
+@import "btn.less";
 
 /*header.less*/
 @import "header.less";
@@ -7,17 +11,16 @@
 /*footer.less*/
 @import "footer.less";
 
+/*main-section.less*/
+@import "main-section.less";
 
 /*MAIN-PAGE*/
 
-/*main-promo.less*/
-@import "main-promo.less";
+/*promo.less*/
+@import "promo.less";
 
-/*promo-menu.less*/
-@import "promo-menu.less";
-
-/*product-card.less*/
-@import "product-card.less";
+/*product.less*/
+@import "product.less";
 
 /*reviews.less*/
 @import "reviews.less";
@@ -25,87 +28,18 @@
 /*contact.less*/
 @import "contact.less";
 
-/*about-us.less*/
-@import "about-us.less";
+/*about.less*/
+@import "about.less";
 
 
 /*FORM-PAGE*/
+
 @import "form.less";
 
 /*CATALOG-PAGE*/
+
 /*catalog.less*/
 @import "catalog.less";
-/*catalog.less*/
+
+/*product-video.less*/
 @import "product-video.less";
-
-
-body { margin: 0; padding: 0; font-family: 'Open Sans', sans-serif; font-size: 15px; line-height: 24px; color: #444444;}
-.container { margin: auto; padding: 0 30px; box-sizing: border-box; position: relative;}
-.main-section_title { color: #010000; font-size: 27px; line-height: 30px;flex-grow: 1; } 
-.page-top .container { display: flex; align-items: center; height: 100%; justify-content: center; text-align: center;}
-.page-top { background: #f1f1f1; height: 175px; margin-bottom: 30px; }
-.main-section_top h1 { margin-top: 0; }
-.main-section { margin: 50px 0; }
-.btn { 
-	line-height: 48px; 
-	box-sizing: border-box; 
-	text-transform: uppercase; 
-	height: 52px; 
-	border: 2px solid #444; 
-	color: #444; 
-	font-weight: 700; 
-	text-decoration: none; 
-	text-align: center;
-	width: 100%; 
-	display: block;
-
-	&:hover {
-		background: #444444;
-		color: #fff;
-	}
-
-	&:active {
-		background: #444444;
-		color: rgba(255,255,255,0.3);
-	}
-
-}
-@media(min-width: 450px) {
-	.container { width: 320px;}
-
-}
-@media(min-width: 768px) {
-	.container { width: 320px;}
-}
-@media(min-width: 991px) {
-	body {
-		font-size: 17px; 
-		line-height: 30px; 
-	}
-	.container {
-		width: 728px;
-	}
-	.main-section_title { 
-		font-size: 43px; 
-		line-height: 50px; 
-	}
-	
-	.btn { width: auto; padding: 0 40px;  }
-	
-}
-@media(min-width: 1200px) {
-	.container { 
-		width: 1110px;
-	}
-	.main-section_title { 
-		font-size: 53px; 
-		line-height: 57px; 
-	}
-	.main-section_cont { 
-		padding-left: 170px; 
-	}
-
-
-
-}
-

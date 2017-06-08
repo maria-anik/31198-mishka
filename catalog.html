@@ -5,16 +5,18 @@
     <title>HTML Academy: Мишка-каталог</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style2.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
    
     	<header class="header">
-		  	<div class="header-top">
+		  	<div class="header_top">
 		  		<div class="container">
-		  			<div class="header_logo"><img src="#" alt=""></div>
-		  			<div class="btn header_menu-btn"></div>
+		  			<div class="header_logo header_logo--mob">
+		  				<img src="img/logo-mobile.svg" alt="" class="header_logo-mob">
+		  				<img src="img/logo-mobile.svg" alt="" class="header_logo-desk">
+		  			</div>
+		  			<div class="header_menu-btn"></div>
 		  			<div class="header_menu">
 				  		<a href="#" class="header_menu-item">Каталог товаров</a>
 				  		<a href="#" class="header_menu-item">Вязание на заказ</a>
@@ -30,11 +32,11 @@
 		  			</div>
 		  		</div>
 		  	</div>
-		  	<div class="header-bottom">
+		  	<div class="header_bottom">
 			  	<div class="container">
-			  		<a href="#" class="header-bottom_link">Новые поступления</a>
-			  		<a href="#" class="header-bottom_link">Распродажа</a>
-			  		<p class="header-bottom_shipping">Бесплатная доставка по России</p>
+			  		<a href="#" class="header_bottom-link ">Новые поступления</a>
+			  		<a href="#" class="header_bottom-link">Распродажа</a>
+			  		<p class="header_bottom-shipping">Бесплатная доставка по России</p>
 			  	</div>
 		  	</div>
 	    </header>
@@ -45,38 +47,62 @@
 	    </section>
 	    <section class="page-wrapper">
 	    	<div class="container">
-	    		<div class="catalog-list">
-	    			<div class="catalog-list_item">
-	    				<a href="#" class="catalog-list_img"><img src="img/photo-1-mobile@1x.jpg" alt=""></a>
-	    				<div class="catalog-list_item-cont">
-	    					<a href="#" class="catalog-list_name">Зайчик-попрыгайчик</a>
-		    				<div class="catalog-list_info">Рост 30 см, вес 200 г</div>
-		    				<div class="catalog-list_buy">
-		    					<div class="catalog-list_buy-price">1 200 руб.</div>
-								<a href="#" class="catalog-list_buy-basket"></a>
+	    		<div class="catalog">
+	    			<div class="catalog_item">
+	    				<a href="#" class="catalog_img"><img src="img/photo-1-mobile@1x.jpg" alt=""></a>
+	    				<div class="catalog_item-cont">
+	    					<a href="#" class="catalog_name">Зайчик-попрыгайчик</a>
+		    				<div class="catalog_info">Рост 30 см, вес 200 г</div>
+		    				<div class="catalog_buy">
+		    					<div class="catalog_buy-price">1 200 руб.</div>
+								<a href="#" class="catalog_buy-basket"></a>
 		    				</div>
 	    				</div>
 	    			</div>
-	    			<div class="catalog-list_item">
-	    				<a href="#" class="catalog-list_img"><img src="img/photo-2-mobile@1x.jpg" alt=""></a>
-	    				<div class="catalog-list_item-cont">
-	    					<a href="#" class="catalog-list_name">Корзинка для белья</a>
-		    				<div class="catalog-list_info">Диаметр 15 см, высота 10 см</div>
-		    				<div class="catalog-list_buy">
-		    					<div class="catalog-list_buy-price">690 руб.</div>
-								<a href="#" class="catalog-list_buy-basket"></a>
+	    			<div class="catalog_item">
+	    				<a href="#" class="catalog_img"><img src="img/photo-2-mobile@1x.jpg" alt=""></a>
+	    				<div class="catalog_item-cont">
+	    					<a href="#" class="catalog_name">Корзинка для белья</a>
+		    				<div class="catalog_info">Диаметр 15 см, высота 10 см</div>
+		    				<div class="catalog_buy">
+		    					<div class="catalog_buy-price">690 руб.</div>
+								<a href="#" class="catalog_buy-basket"></a>
 		    				</div>
 	    				</div>
 		    				
 	    			</div>
-	    			<div class="catalog-list_item">
-	    				<a href="#" class="catalog-list_img"><img src="img/photo-3-mobile@1x.jpg" alt=""></a>
-	    				<div class="catalog-list_item-cont">
-	    					<a href="#" class="catalog-list_name">Большая корзинка для игрушек</a>
-		    				<div class="catalog-list_info">Диаметр  30 см, высота 30 см</div>
-		    				<div class="catalog-list_buy">
-		    					<div class="catalog-list_buy-price"> 1 500 руб.</div>
-								<a href="#" class="catalog-list_buy-basket"></a>
+	    			<div class="catalog_item">
+	    				<a href="#" class="catalog_img"><img src="img/photo-3-mobile@1x.jpg" alt=""></a>
+	    				<div class="catalog_item-cont">
+	    					<a href="#" class="catalog_name">Большая корзинка для игрушек</a>
+		    				<div class="catalog_info">Диаметр  30 см, высота 30 см</div>
+		    				<div class="catalog_buy">
+		    					<div class="catalog_buy-price"> 1 500 руб.</div>
+								<a href="#" class="catalog_buy-basket"></a>
+		    				</div>
+	    				</div>
+		    				
+	    			</div>
+	    			<div class="catalog_item">
+	    				<a href="#" class="catalog_img"><img src="img/photo-2-mobile@1x.jpg" alt=""></a>
+	    				<div class="catalog_item-cont">
+	    					<a href="#" class="catalog_name">Корзинка для белья</a>
+		    				<div class="catalog_info">Диаметр 15 см, высота 10 см</div>
+		    				<div class="catalog_buy">
+		    					<div class="catalog_buy-price">690 руб.</div>
+								<a href="#" class="catalog_buy-basket"></a>
+		    				</div>
+	    				</div>
+		    				
+	    			</div>
+	    			<div class="catalog_item">
+	    				<a href="#" class="catalog_img"><img src="img/photo-3-mobile@1x.jpg" alt=""></a>
+	    				<div class="catalog_item-cont">
+	    					<a href="#" class="catalog_name">Большая корзинка для игрушек</a>
+		    				<div class="catalog_info">Диаметр  30 см, высота 30 см</div>
+		    				<div class="catalog_buy">
+		    					<div class="catalog_buy-price"> 1 500 руб.</div>
+								<a href="#" class="catalog_buy-basket"></a>
 		    				</div>
 	    				</div>
 		    				

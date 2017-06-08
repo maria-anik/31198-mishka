@@ -1,0 +1,29 @@
+
+.btn { 
+	line-height: 48px; 
+	box-sizing: border-box; 
+	text-transform: uppercase; 
+	height: 52px; 
+	border: 2px solid #444; 
+	color: #444; 
+	font-weight: 700; 
+	text-decoration: none; 
+	text-align: center;
+	width: 100%; 
+	display: block;
+
+	&:hover {
+		background: #444444;
+		color: #fff;
+	}
+
+	&:active {
+		background: #444444;
+		color: rgba(255,255,255,0.3);
+	}
+
+}
+
+@media(min-width: 768px) {
+	.btn { width: auto; padding: 0 40px;  }
+}
