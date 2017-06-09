@@ -1,9 +1,19 @@
+
+.reviews .container { 
+	@media @view-tablets {
+		padding-top: 70px; 
+		padding-bottom: 70px; 
+	}
+}
+
 .reviews_item { 
 	display: none; 
+
+	&:nth-child(1) { 
+		display: block; 
+	}
 }
-.reviews_item:nth-child(1) { 
-	display: block; 
-}
+
 .reviews_text { 
 	line-height: 30px; 
 	margin-bottom: 30px;
@@ -11,17 +21,25 @@
 .reviews_name { 
 	width: 100%; 
 	font-weight: 700; 
-	color: #000; 
+	color: @color-black; 
 	font-size: 17px; 
 }
 .reviews_mail { 
 	text-decoration: none; 
-	color: #444; 
+	color: @color-main_grey; 
 	display: inline-block; 
 }
 .reviews_arrow { 
 	display: flex; 
 	margin: 38px 0;
+
+	@media @view-tablets {
+		width: 175px; 
+		position: absolute; 
+		bottom: 70px; 
+		right: 30px; 
+		margin: 0; 
+	}
 }
 .reviews_arrow-item { 
 	flex-grow: 1; 
@@ -30,26 +48,29 @@
 	box-sizing: border-box; 
 	cursor: pointer;
 
+	@media @view-tablets {
+		border: none;
+	}
+
 	&:hover {
 		opacity: 0.6;
 	}
 	&:active {
 		opacity: 0.3;
 	}
-}
-.reviews_arrow-item--left {
-	background: url(../img/icon-left-arrow.svg) no-repeat center;
-}
-.reviews_arrow-item--right {
-	background: url(../img/icon-right-arrow.svg) no-repeat center;
-}
 
+	&--left {
+		background: url(../img/icon-left-arrow.svg) no-repeat center;
+	}
+
+	&--right {
+		background: url(../img/icon-right-arrow.svg) no-repeat center;
+	}
+}
 .reviews_back {
 	display: none;
-}
 
-@media(min-width: 768px) {
-	.reviews_back {
+	@media @view-tablets {
 		display: block;
 		position: absolute; 
 		height: 100%;
@@ -57,31 +78,19 @@
 		left: 0;	
 		z-index: -1;
 	}
-	.reviews_back img {
-		height: 100%; 
-		width: auto;
+
+	img {
+		@media @view-tablets {
+			height: 100%; 
+			width: auto;
+		}
 	}
-	.reviews .container { 
-		padding-top: 70px; 
-		padding-bottom: 70px; 
-	}
-	.btn-reviews {
+}
+
+.btn-reviews {
+	@media @view-tablets {
 		position: absolute; 
 		top: 70px; 
 		right: 30px;
 	}
-	.reviews_arrow { 
-		width: 175px; 
-		position: absolute; 
-		bottom: 70px; 
-		right: 30px; 
-		margin: 0; 
-	}
-	.reviews_arrow-item {
-		border: none;
-	}
-}
-
-@media(min-width: 1200px) {
-	
 }

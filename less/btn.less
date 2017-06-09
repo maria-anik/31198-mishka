@@ -4,8 +4,8 @@
 	box-sizing: border-box; 
 	text-transform: uppercase; 
 	height: 52px; 
-	border: 2px solid #444; 
-	color: #444; 
+	border: 2px solid @color-main_grey; 
+	color: @color-main_grey; 
 	font-weight: 700; 
 	text-decoration: none; 
 	text-align: center;
@@ -13,17 +13,18 @@
 	display: block;
 
 	&:hover {
-		background: #444444;
+		background: @color-main_grey;
 		color: #fff;
 	}
 
 	&:active {
-		background: #444444;
+		background: @color-main_grey;
 		color: rgba(255,255,255,0.3);
 	}
 
-}
+	@media @view-tablets {
+		width: auto; 
+		padding: 0 40px;
+	}
 
-@media(min-width: 768px) {
-	.btn { width: auto; padding: 0 40px;  }
 }
