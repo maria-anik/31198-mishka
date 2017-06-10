@@ -1,0 +1,47 @@
+.main-section { 
+	margin: 50px 0; 
+	
+	@media @view-desktop {
+		.container { 
+			padding-left: 185px; 
+		}
+	}
+}
+
+.main-section_title { 
+	color: #010000; 
+	flex-grow: 1; 
+	.title_mob;
+
+	@media @view-tablets {
+		.title_tablets;
+	}
+
+	@media @view-desktop {
+		.title_desktop;
+	}
+} 
+.main-section_top h1 { 
+	margin-top: 0; 
+}
+.main-section_top {
+	position: relative;
+}
+
+.main-section_mark {
+
+	@media @view-tablets {
+		position: absolute; 
+		width: 90px; 
+		text-align: center; 
+		right: 0px; 
+		top: 10px;
+	}
+
+	@media @view-desktop {
+		left: -140px; 
+		top: 10px; 
+		right: inherit;
+	}
+
+}
