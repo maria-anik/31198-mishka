@@ -11,21 +11,30 @@
 		<header class="header">
 			<div class="header_top">
 				<div class="container">
-					<div class="header_logo header_logo--mob">
-						<img src="img/logo-mobile.svg" alt="" class="header_logo-mob">
-						<img src="img/logo-mobile.svg" alt="" class="header_logo-desk">
+					<div class="header_logo">
+						<img src="img/logo-mobile.svg" alt="">
 					</div>
 					<div class="header_menu-btn"></div>
 					<div class="header_menu">
-						<a href="#" class="header_menu-item">Каталог товаров</a>
-						<a href="#" class="header_menu-item">Вязание на заказ</a>
-						<div class="search header_search header_menu-item">
+						<div class="header_menu-link">
+							<a href="#" class="header_menu-item header_menu-item--link">Каталог товаров</a>
+							<a href="#" class="header_menu-item header_menu-item--link">Вязание на заказ</a>
+
+							<p class="header_shipping">Бесплатная доставка по России</p>
+						</div>
+						
+						<a href="#" class="header_menu-item header_menu-item--logo">
+							<img src="img/logo-desktop.svg" alt="" class="header_logo-desk">
+							<img src="img/logo-tablet.svg" alt="" class="header_logo-tablet">
+						</a>
+						<div class="search header_menu-item  header_menu-item--search">
 							<div class="search_btn"><span>Поиск по сайту</span></div>
 							<div class="search_block">
 								<input type="text" class="">
 							</div>
 						</div>
-						<a href="#" class="header_basket header_menu-item">
+						
+						<a href="#" class="header_menu-item header_menu-item--basket header_menu-item--basket-empty">
 							<p>Корзина: <span>пока пуста</span></p>
 						</a>
 					</div>
@@ -35,7 +44,7 @@
 				<div class="container">
 					<a href="#" class="header_bottom-link ">Новые поступления</a>
 					<a href="#" class="header_bottom-link">Распродажа</a>
-					<p class="header_bottom-shipping">Бесплатная доставка по России</p>
+					<p class="header_shipping">Бесплатная доставка по России</p>
 				</div>
 			</div>
 		</header>
@@ -153,17 +162,41 @@
 							
 				</form>
 		</section>
-		 <footer class="footer">
+		<footer class="footer">
 			<div class="container">
-				<a href="#" class="footer_logo"><img src="#" alt=""></a>
+				<a href="#" class="footer_logo">
+					<svg width="105px" height="35px">
+						<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/logo-footer.svg#icon"></use>
+					</svg>
+				</a>
 				<div class="social">
-					<a href="#" class="social_item social_item--in">Мы в Instagramm</a>
-					<a href="#" class="social_item social_item--fb">Мы в Facebook</a>
-					<a href="#" class="social_item social_item--tr">Мы в Twitter</a>
+					<a href="#" class="social_item social_item--in">
+						<span>Мы в Instagramm</span>
+						<!--svg width="40px" height="40px">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-insta.svg#icon"></use>
+						</svg-->
+					</a>
+					<a href="#" class="social_item social_item--fb">
+						<span>Мы в Facebook</span>
+						<!--svg width="40px" height="40px">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-fb.svg#icon"></use>
+						</svg-->
+					</a>
+					<a href="#" class="social_item social_item--tr">
+						<span>Мы в Twitter</span>
+						<!--svg width="40px" height="40px">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/icon-twitter.svg#icon"></use>
+						</svg-->
+					</a>
 				</div>
-				<a href="#" class="developer">Разработано</a>
+				<a href="#" class="developer">Разработано 
+					<span>
+						<svg width="27px" height="34px">
+							<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/logo-htmlacademy.svg#icon"></use>
+						</svg>
+					</span>
+				</a>
 			</div>
 		</footer>
-
 	</body>
 </html>

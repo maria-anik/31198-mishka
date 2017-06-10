@@ -174,8 +174,8 @@ textarea.input-text {
 
 		@media @view-tablets {
 			padding-left: 80px;
-		}
-
+		};
+		
 		&:before {
 			content: "";
 			position: absolute;
@@ -186,12 +186,22 @@ textarea.input-text {
 			box-sizing: border-box;
 			border: 2px solid @color-main_grey;
 
+
+
 			@media @view-tablets {
 				width: 54px; 
 				height: 54px; 
 				box-sizing: border-box;
 				top: -15px;
 			}
+		};
+
+		&:hover:before {
+			border-color: #62d1ba;
+		}
+
+		&:active:before {
+			border-color: #c7c7c7;
 		}
 	}
 
@@ -247,6 +257,14 @@ textarea.input-text {
 				box-sizing: border-box;
 				top: -16px;
 			}
+		}
+
+		&:hover:before {
+			border-color: #62d1ba;
+		}
+
+		&:active:before {
+			border-color: #c7c7c7;
 		}
 	}
 
