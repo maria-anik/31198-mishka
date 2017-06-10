@@ -19,6 +19,7 @@
 	@media @view-tablets {
 		width: 50%;
 	}
+
 	@media @view-desktop {
 		width: 100%;
 	}
@@ -30,14 +31,15 @@
 .contact-info_item-text { 
 	flex-grow: 1; 
 }
-.contact_map  { 
+.contact_map { 
 	height: 460px; 
 	margin: 0px -30px 40px;
-	background: url(../img/map-mobile@1x.jpg) no-repeat center; 
+	background: url('@{img-path}/map-mobile@1x.jpg') no-repeat center; 
 
 	@media @view-tablets {
 		background-size: cover;
 	}
+
 	@media @view-desktop {
 		width: 50%;
 		top: -80px;
@@ -52,6 +54,7 @@
 	&:hover{
 		color: #62d1ba;
 	} 
+
 	&:active{
 		opacity: 0.3;
 	} 

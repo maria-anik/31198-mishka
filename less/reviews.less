@@ -5,7 +5,6 @@
 		padding-bottom: 70px; 
 	}
 }
-
 .reviews_item { 
 	display: none; 
 
@@ -13,7 +12,6 @@
 		display: block; 
 	}
 }
-
 .reviews_text { 
 	line-height: 30px; 
 	margin-bottom: 30px;
@@ -48,23 +46,24 @@
 	box-sizing: border-box; 
 	cursor: pointer;
 
-	@media @view-tablets {
-		border: none;
-	}
-
 	&:hover {
 		opacity: 0.6;
 	}
+
 	&:active {
 		opacity: 0.3;
 	}
 
+	@media @view-tablets {
+		border: none;
+	}
+
 	&--left {
-		background: url(../img/icon-left-arrow.svg) no-repeat center;
+		background: url('@{img-path}/icon-left-arrow.svg') no-repeat center;
 	}
 
 	&--right {
-		background: url(../img/icon-right-arrow.svg) no-repeat center;
+		background: url('@{img-path}/icon-right-arrow.svg') no-repeat center;
 	}
 }
 .reviews_back {
@@ -86,7 +85,6 @@
 		}
 	}
 }
-
 .btn-reviews {
 	@media @view-tablets {
 		position: absolute; 

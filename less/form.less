@@ -15,6 +15,7 @@
 	@media @view-tablets {
 		flex-grow: 1;
 	}
+
 	&--check {
 		@media @view-tablets {
 			display: flex;
@@ -27,23 +28,23 @@
 	@media @view-tablets {
 		padding: 50px 0;
 	}
+
 	.container { 
 		@media @view-tablets {
 			display: flex;
 		}
+
 		@media @view-desktop {
 			padding-left: 90px;
 		}
 	}
+
 	&--dark {
 		@media @view-tablets {
 			background: @fone_grey;
 		}
 	}
 }
-
-
-
 .form-input {
 	display: flex;
 	flex-direction: column;
@@ -65,14 +66,12 @@
 			flex-grow: 1;
 		}
 	}
- }
- 
+}
 .form-input_name {
 	font-size: 17px;
 	color: @color-black;
 	font-weight: 700;
- }
- 
+}
 .input-text {
 	height: 40px;
 	line-height: 24px;
@@ -84,7 +83,6 @@
 	background: transparent;
 	outline: none;
 
-
 	&::-webkit-input-placeholder {opacity: 0.3;}
 	&::-moz-placeholder          {opacity: 0.3;}/* Firefox 19+ */
 	&:-moz-placeholder           {opacity: 0.3;}/* Firefox 18- */
@@ -95,8 +93,7 @@
 		font-size: 19px
 	}
 
- }
- 
+}
 textarea.input-text {
 	border: 2px solid @color-black;
 	width: 100%;
@@ -104,8 +101,7 @@ textarea.input-text {
 	height: 145px;
 	padding: 15px;
 	box-sizing: border-box;
- }
- 
+}
 .form_title {
 	color: #63d1bb;
 	text-transform: uppercase;
@@ -137,17 +133,15 @@ textarea.input-text {
 	}
 
 	span {
-	 	display: inline-block;
-	 	padding-right: 20px;
-	 	background: #fff; 
+		display: inline-block;
+		padding-right: 20px;
+		background: #fff; 
 
-	 	@media @view-tablets {
-	 		background: transparent;
-	 	}
-	 }
- }
-	
- 
+		@media @view-tablets {
+			background: transparent;
+		}
+	}
+}
 .form-check {
 	position: relative;
 	min-height: 40px;
@@ -202,14 +196,9 @@ textarea.input-text {
 	}
 
 	input:checked + label:before {
-		background: url(../img/check.svg) no-repeat center; 
+		background: url('@{img-path}/check.svg') no-repeat center; 
 	}
- }
- 
-	
-
-
-
+}
 .form-radio {
 	position: relative;
 	min-height: 40px;
@@ -279,12 +268,6 @@ textarea.input-text {
 		}
 	}
 }
- 
-
- 
-	
- 
- 
 .form p {
 	font-size: 13px;
 	line-height: 24px;
@@ -294,8 +277,7 @@ textarea.input-text {
 		font-size: 17px; 
 		line-height: 30px;
 	}
- }
- 
+}
 .form_dop-text {
 	font-size: 14px;
 	line-height: 16px;
@@ -307,8 +289,7 @@ textarea.input-text {
 		font-size: 17px;
 		line-height: 30px;
 	}
- }
- 
+}
 .form_btn {
 	background: #fff;
 	outline: none;
@@ -316,4 +297,4 @@ textarea.input-text {
 	@media @view-tablets {
 		float: left;
 	}
- }
+}
