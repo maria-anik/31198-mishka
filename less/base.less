@@ -1,59 +1,81 @@
 
-body { 
-	margin: 0; 
-	padding: 0; 
-	font-family: @ff; 
-	font-size: @fz; 
-	line-height: @flh; 
+body {
+	margin: 0;
+	padding: 0;
+	font-family: @ff;
+	font-size: @fz;
+	line-height: @flh;
 	color: @color-main_grey;
 
 	@media @view-tablets {
-		font-size: 17px; 
-		line-height: 30px; 
+		font-size: 17px;
+		line-height: 30px;
 	}
 
 }
-.clearfix:after { 
-	content: ""; 
-	display:table; 
+.clearfix:after {
+	content: "";
+	display: block;
 	clear: both;
 }
-.container { 
-	margin: auto; 
+.container {
+	margin: auto;
 	padding: 0 30px;
-	box-sizing: border-box; 
-	position: relative; 
+	box-sizing: border-box;
+	position: relative;
 	width: 320px;
 
 	@media @view-tablets {
 		width: 768px;
+    padding: 0 50px;
 	}
 	@media @view-desktop {
 		width: 1110px;
+    padding: 0 30px;
 	}
 }
-.page-top .container { 
-	display: flex; 
-	align-items: center; 
-	height: 100%; 
-	justify-content: center; 
+.page-top .container {
+	display: flex;
+	align-items: center;
+	height: 100%;
+	justify-content: center;
 	text-align: center;
 }
-.page-top { 
-	background: @fone_grey; 
-	height: 175px; 
-	margin-bottom: 30px; 
+.page-top {
+	background: @fone_grey;
+	height: 175px;
+  position: relative;
+
+  @media @view-tablets {
+    height: 250px;
+
+    &:after {
+      content: "";
+      height: 34px;
+      width: 100%;
+      background: url('@{img-path}/zigzag-fill.svg') repeat-x center;
+      position: absolute;
+      bottom: -20px;
+    }
+  }
+
+
 
 }
 
 .page-top_title {
 	color: #231f20;
-	.title_mob;
+	.title;
+}
 
-	@media @view-tablets {
-		.title_tablets;
-	}
-	@media @view-desktop {
-		.title_desktop;
-	}
+.page-wrapper {
+  padding: 22px 0 55px;
+
+  @media @view-tablets {
+    padding: 40px 0 50px;
+  }
+
+  @media @view-desktop {
+    padding: 60px 0 40px;
+  }
 }

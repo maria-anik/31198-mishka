@@ -1,49 +1,94 @@
+.reviews {
 
-.reviews .container { 
-	@media @view-tablets {
-		padding-top: 70px; 
-		padding-bottom: 70px; 
+  @media @view-tablets {
+      margin-bottom: 142px;
+    }
+
+    @media @view-desktop {
+    }
+
+
+  .container {
+    @media @view-tablets {
+      position: relative;
+      padding-top: 70px;
+      padding-bottom: 70px;
+
+      &:after {
+        content:"";
+        width: ~'calc(100% - 100px)';
+        height: 34px;
+        position: absolute;
+        bottom: -97px;
+        left: 50px;
+        background: url('@{img-path}/zigzag-line.svg') repeat-x center;
+      }
+    }
+
+    @media @view-desktop {
+      padding-bottom: 95px;
+
+      &:after {
+        width: ~'calc(100% - 60px)';
+        left: 30px;
+      }
+    }
+  }
+
+  .main-section_top {
+    @media @view-desktop {
+      margin-bottom: 48px;
+    }
+  }
+}
+
+.reviews_item {
+	display: none;
+
+	&:nth-child(1) {
+		display: block;
 	}
 }
-.reviews_item { 
-	display: none; 
-
-	&:nth-child(1) { 
-		display: block; 
-	}
-}
-.reviews_text { 
-	line-height: 30px; 
+.reviews_text {
+	line-height: 30px;
 	margin-bottom: 30px;
+
+  @media @view-desktop {
+    margin-bottom: 35px;
+  }
 }
-.reviews_name { 
-	width: 100%; 
-	font-weight: 700; 
-	color: @color-black; 
-	font-size: 17px; 
+.reviews_name {
+	width: 100%;
+	font-weight: 700;
+	color: @color-black;
+	font-size: 17px;
 }
-.reviews_mail { 
-	text-decoration: none; 
-	color: @color-main_grey; 
-	display: inline-block; 
+.reviews_mail {
+	text-decoration: none;
+	color: @color-main_grey;
+	display: inline-block;
 }
-.reviews_arrow { 
-	display: flex; 
+.reviews_arrow {
+	display: flex;
 	margin: 38px 0;
 
 	@media @view-tablets {
-		width: 175px; 
-		position: absolute; 
-		bottom: 70px; 
-		right: 30px; 
-		margin: 0; 
+		width: 175px;
+		position: absolute;
+		bottom: 70px;
+		right: 30px;
+		margin: 0;
 	}
+
+  @media @view-desktop {
+    bottom: 98px;
+  }
 }
-.reviews_arrow-item { 
-	flex-grow: 1; 
-	height: 50px; 
-	border: 1px solid #ececec; 
-	box-sizing: border-box; 
+.reviews_arrow-item {
+	flex-grow: 1;
+	height: 50px;
+	border: 1px solid #ececec;
+	box-sizing: border-box;
 	cursor: pointer;
 
 	&:hover {
@@ -71,24 +116,32 @@
 
 	@media @view-tablets {
 		display: block;
-		position: absolute; 
+		position: absolute;
 		height: 100%;
 		top: 0;
-		left: 0;	
+		left: 0;
 		z-index: -1;
 	}
 
+  @media @view-desktop {
+    left: 30px;
+  }
+
 	img {
 		@media @view-tablets {
-			height: 100%; 
+			height: 100%;
 			width: auto;
 		}
 	}
 }
 .btn-reviews {
 	@media @view-tablets {
-		position: absolute; 
-		top: 70px; 
+		position: absolute;
+		top: 70px;
 		right: 30px;
 	}
+
+  @media @view-desktop {
+    top: 78px;
+  }
 }
