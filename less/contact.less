@@ -28,84 +28,84 @@
 }
 
 .contact-info {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-	@media @view-tablets {
-		flex-direction: row;
-	}
+  @media @view-tablets {
+    flex-direction: row;
+  }
 
-	@media @view-desktop {
-		flex-direction: column;
-		padding-right: 570px;
-		margin: 50px 0 50px;
-	}
+  @media @view-desktop {
+    flex-direction: column;
+    padding-right: 570px;
+    margin: 50px 0 50px;
+  }
 }
 .contact-info_item {
-	display: flex;
-	margin-bottom: 40px;
+  display: flex;
+  margin-bottom: 40px;
 
-	@media @view-tablets {
-		width: 50%;
-	}
+  @media @view-tablets {
+    width: 50%;
+  }
 
-	@media @view-desktop {
-		width: 100%;
+  @media @view-desktop {
+    width: 100%;
     margin-bottom: 30px;
-	}
+  }
 }
 .contact-info_item-label {
-	flex-basis: 80px;
-	flex-shrink: 0;
+  flex-basis: 80px;
+  flex-shrink: 0;
 }
 .contact-info_item-text {
-	flex-grow: 1;
+  flex-grow: 1;
 }
 .contact_map {
-	height: 460px;
-	margin: 0px -30px 40px;
-	background: url('@{img-path}/map-mobile@1x.jpg') no-repeat center;
+  height: 460px;
+  margin: 0px -30px 40px;
+  background: url('@{img-path}/map-mobile@1x.jpg') no-repeat center;
 
-	@media @view-tablets {
-		background-size: cover;
-	}
+  @media @view-tablets {
+    background-size: cover;
+  }
 
-	@media @view-desktop {
-		width: ~'calc(50% - 30px)';
-		top: -70px;
-		margin: 0;
-		position: absolute;
-    	right: 30px;
-	}
+  @media @view-desktop {
+    width: ~'calc(50% - 30px)';
+    top: -70px;
+    margin: 0;
+    position: absolute;
+      right: 30px;
+  }
 }
 .contact-info_item-text--mail {
-	text-decoration: none;
-	color: @color-main_grey;
+  text-decoration: none;
+  color: @color-main_grey;
 
-	&:hover{
-		color: #62d1ba;
-	}
+  &:hover{
+    color: #62d1ba;
+  }
 
-	&:active{
-		opacity: 0.3;
-	}
+  &:active{
+    opacity: 0.3;
+  }
 }
 .contact-info_item-text--mail span {
-	display: inline-block;
-	border-bottom: 1px solid #62d1ba;
+  display: inline-block;
+  border-bottom: 1px solid #62d1ba;
 }
 
 .btn-contact {
-	margin-bottom: 40px;
+  margin-bottom: 40px;
 
-	@media @view-tablets {
-		width: 230px;
-		padding: 0 20px;
-		margin: auto;
-	}
+  @media @view-tablets {
+    width: 230px;
+    padding: 0 20px;
+    margin: auto;
+  }
 
-	@media @view-desktop {
-		margin: 0;
-	}
+  @media @view-desktop {
+    margin: 0;
+  }
 }
 

@@ -43,103 +43,103 @@
 }
 
 .reviews_item {
-	display: none;
+  display: none;
 
-	&:nth-child(1) {
-		display: block;
-	}
+  &:nth-child(1) {
+    display: block;
+  }
 }
 .reviews_text {
-	line-height: 30px;
-	margin-bottom: 30px;
+  line-height: 30px;
+  margin-bottom: 30px;
 
   @media @view-desktop {
     margin-bottom: 35px;
   }
 }
 .reviews_name {
-	width: 100%;
-	font-weight: 700;
-	color: @color-black;
-	font-size: 17px;
+  width: 100%;
+  font-weight: 700;
+  color: @color-black;
+  font-size: 17px;
 }
 .reviews_mail {
-	text-decoration: none;
-	color: @color-main_grey;
-	display: inline-block;
+  text-decoration: none;
+  color: @color-main_grey;
+  display: inline-block;
 }
 .reviews_arrow {
-	display: flex;
-	margin: 38px 0;
+  display: flex;
+  margin: 38px 0;
 
-	@media @view-tablets {
-		width: 175px;
-		position: absolute;
-		bottom: 70px;
-		right: 30px;
-		margin: 0;
-	}
+  @media @view-tablets {
+    width: 175px;
+    position: absolute;
+    bottom: 70px;
+    right: 30px;
+    margin: 0;
+  }
 
   @media @view-desktop {
     bottom: 98px;
   }
 }
 .reviews_arrow-item {
-	flex-grow: 1;
-	height: 50px;
-	border: 1px solid #ececec;
-	box-sizing: border-box;
-	cursor: pointer;
+  flex-grow: 1;
+  height: 50px;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+  cursor: pointer;
 
-	&:hover {
-		opacity: 0.6;
-	}
+  &:hover {
+    opacity: 0.6;
+  }
 
-	&:active {
-		opacity: 0.3;
-	}
+  &:active {
+    opacity: 0.3;
+  }
 
-	@media @view-tablets {
-		border: none;
-	}
+  @media @view-tablets {
+    border: none;
+  }
 
-	&--left {
-		background: url('@{img-path}/icon-left-arrow.svg') no-repeat center;
-	}
+  &--left {
+    background: url('@{img-path}/icon-left-arrow.svg') no-repeat center;
+  }
 
-	&--right {
-		background: url('@{img-path}/icon-right-arrow.svg') no-repeat center;
-	}
+  &--right {
+    background: url('@{img-path}/icon-right-arrow.svg') no-repeat center;
+  }
 }
 .reviews_back {
-	display: none;
+  display: none;
 
-	@media @view-tablets {
-		display: block;
-		position: absolute;
-		height: 100%;
-		top: 0;
-		left: 0;
-		z-index: -1;
-	}
+  @media @view-tablets {
+    display: block;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
 
   @media @view-desktop {
     left: 30px;
   }
 
-	img {
-		@media @view-tablets {
-			height: 100%;
-			width: auto;
-		}
-	}
+  img {
+    @media @view-tablets {
+      height: 100%;
+      width: auto;
+    }
+  }
 }
 .btn-reviews {
-	@media @view-tablets {
-		position: absolute;
-		top: 70px;
-		right: 30px;
-	}
+  @media @view-tablets {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+  }
 
   @media @view-desktop {
     top: 78px;

@@ -1,288 +1,288 @@
 
 .header_menu-btn {
-	width: 25px;
-	height: 25px;
-	position: absolute;
-	top: 0px;
-	right: 30px;
-	background: url('@{img-path}/icon-menu-open.svg') no-repeat center;
-	cursor: pointer;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 0px;
+  right: 30px;
+  background: url('@{img-path}/icon-menu-open.svg') no-repeat center;
+  cursor: pointer;
 }
 .header_search.active .search_block {
-	display: block;
+  display: block;
 }
 .header_logo {
-	margin: auto;
+  margin: auto;
 
-	@media @view-tablets {
-		position: absolute;
-		left: 0;
-		right: 0;
-		width: 200px;
-	}
+  @media @view-tablets {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 200px;
+  }
 }
 .header_top {
-	border-top: 1px solid #ececec;
-	border-bottom: 1px solid #ececec;
-	padding: 20px 0;
+  border-top: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
+  padding: 20px 0;
   background: #fff;
 
-	&>.container {
-		position: relative;
-		display: flex;
-	}
+  &>.container {
+    position: relative;
+    display: flex;
+  }
 
-	@media @view-tablets {
-		padding: 0;
-	}
+  @media @view-tablets {
+    padding: 0;
+  }
 }
 .header_menu-link {
-	@media @view-tablets {
-		width: 100%;
-		position: absolute;
-		top: 98px;
-		left: 0;
-		display: flex;
-	}
+  @media @view-tablets {
+    width: 100%;
+    position: absolute;
+    top: 98px;
+    left: 0;
+    display: flex;
+  }
 
-	@media @view-desktop {
-		width: auto;
-		position: static;
-	}
+  @media @view-desktop {
+    width: auto;
+    position: static;
+  }
 
-	.header_shipping {
+  .header_shipping {
     order: 3;
-		display: none;
+    display: none;
 
-		@media @view-tablets {
-			display: block;
-		}
+    @media @view-tablets {
+      display: block;
+    }
 
-		@media @view-desktop {
-			display: none;
-		}
-	}
+    @media @view-desktop {
+      display: none;
+    }
+  }
 }
 .header_bottom {
-	display: none;
-	font-size: 15px;
-	margin-bottom: -60px;
-	z-index: 20;
-	position: relative;
+  display: none;
+  font-size: 15px;
+  margin-bottom: -60px;
+  z-index: 20;
+  position: relative;
 
-	@media @view-desktop {
-		display: block;
-		padding: 15px 0;
+  @media @view-desktop {
+    display: block;
+    padding: 15px 0;
 
-		.container {
-			display: flex;
-		}
-	}
+    .container {
+      display: flex;
+    }
+  }
 }
 .header_shipping {
-	margin: 0;
-	margin-left: auto;
+  margin: 0;
+  margin-left: auto;
   font-size: 15px;
 }
 .header_bottom-link {
-	padding: 0 30px;
-	font-weight: 700;
-	color: #000000;
-	text-decoration: none;
+  padding: 0 30px;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
 
-	&:first-child {
-		padding-left: 0;
-	}
+  &:first-child {
+    padding-left: 0;
+  }
 
-	&:hover {
-		opacity: 0.6;
-	}
+  &:hover {
+    opacity: 0.6;
+  }
 
-	&:active {
-		opacity: 0.3;
-	}
+  &:active {
+    opacity: 0.3;
+  }
 }
 .header_menu {
-	left: 0;
-	background: #fff;
-	position: absolute;
-	width: 100%;
-	display: none;
-	z-index: 20;
-	top: 56px;
+  left: 0;
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  display: none;
+  z-index: 20;
+  top: 56px;
 
-	@media @view-tablets {
-		position: relative;
-		top: inherit;
-		display: flex;
-	}
+  @media @view-tablets {
+    position: relative;
+    top: inherit;
+    display: flex;
+  }
 
-	@media @view-desktop {
+  @media @view-desktop {
 
-	}
+  }
 
 }
 .header_menu-item {
-	display: block;
-	padding: 30px;
-	padding-left: 70px;
-	color: #000;
-	text-decoration: none;
-	font-size: 17px;
-	line-height: 20px;
-	font-weight: 700;
-	border-bottom: 1px solid #ececec;
-	position: relative;
+  display: block;
+  padding: 30px;
+  padding-left: 70px;
+  color: #000;
+  text-decoration: none;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  border-bottom: 1px solid #ececec;
+  position: relative;
 
-	&:hover {
-		text-decoration: none;
-	}
+  &:hover {
+    text-decoration: none;
+  }
 
-	&--link {
-		&:hover {
-			opacity: 0.6;
-		}
+  &--link {
+    &:hover {
+      opacity: 0.6;
+    }
 
-		&:active {
-			opacity: 0.3;
-		}
-	}
+    &:active {
+      opacity: 0.3;
+    }
+  }
 
-	&--logo {
-		display: none;
-	}
+  &--logo {
+    display: none;
+  }
 
-	&--basket {
-		p {
-			margin: 0;
-		}
+  &--basket {
+    p {
+      margin: 0;
+    }
 
-		&:before {
-			content: "";
-			width: 30px;
-			height: 30px;
-			margin-right: 25px;
-			background: url('@{img-path}/icon-cart.svg') no-repeat center;
-			position: absolute;
-			left: 30px;
-			top: 25px;
+    &:before {
+      content: "";
+      width: 30px;
+      height: 30px;
+      margin-right: 25px;
+      background: url('@{img-path}/icon-cart.svg') no-repeat center;
+      position: absolute;
+      left: 30px;
+      top: 25px;
 
-			@media @view-tablets {
-				position: static;
-			}
-		}
-	}
+      @media @view-tablets {
+        position: static;
+      }
+    }
+  }
 
-	&--basket-empty {
-		&:before {
-			opacity: 0.2;
-		}
-	}
+  &--basket-empty {
+    &:before {
+      opacity: 0.2;
+    }
+  }
 
-	@media @view-tablets {
-		padding: 10px 27px;
-		border-bottom: none;
-		vertical-align: middle;
-		display: flex;
-		align-items: center;
+  @media @view-tablets {
+    padding: 10px 27px;
+    border-bottom: none;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
 
-		&:first-child {
-			padding-left: 0;
-		}
+    &:first-child {
+      padding-left: 0;
+    }
 
-		&:last-child {
-			padding-right: 0;
-		}
+    &:last-child {
+      padding-right: 0;
+    }
 
-		&--logo {
-			margin-right: auto;
-			padding: 21px 0;
+    &--logo {
+      margin-right: auto;
+      padding: 21px 0;
 
-			.header_logo-tablet {
-				display: block;
-			}
+      .header_logo-tablet {
+        display: block;
+      }
 
-			.header_logo-desk {
-				display: none;
-			}
-		}
+      .header_logo-desk {
+        display: none;
+      }
+    }
 
-		&--search {
-			border-right: 1px solid #ececec;
-			border-left: 1px solid #ececec;
+    &--search {
+      border-right: 1px solid #ececec;
+      border-left: 1px solid #ececec;
       padding: 10px 30px;
-		}
+    }
 
-		&--link {
-			padding: 10px 19px;
-			font-size: 15px;
-		}
-	}
+    &--link {
+      padding: 10px 19px;
+      font-size: 15px;
+    }
+  }
 
-	@media @view-desktop {
-		&--logo {
-			margin: auto;
+  @media @view-desktop {
+    &--logo {
+      margin: auto;
       padding: 10px 0;
 
-			.header_logo-tablet {
-				display: none;
-			}
+      .header_logo-tablet {
+        display: none;
+      }
 
-			.header_logo-desk {
-				display: block;
-			}
-		}
+      .header_logo-desk {
+        display: block;
+      }
+    }
 
-		&--link {
-			padding: 10px 35px;
-			font-size: 17px;
+    &--link {
+      padding: 10px 35px;
+      font-size: 17px;
 
       &:last-child {
         padding-right: 0;
       }
-		}
+    }
 
-		&:first-child {
-			border-right: 1px solid #ececec;
-		}
-	}
+    &:first-child {
+      border-right: 1px solid #ececec;
+    }
+  }
 }
 .search_btn {
-	@media @view-tablets {
-		width: 20px;
-		height: 20px;
-		background: url('@{img-path}/icon-search.svg') no-repeat center;
-		opacity: 0.2;
-		cursor: pointer;
+  @media @view-tablets {
+    width: 20px;
+    height: 20px;
+    background: url('@{img-path}/icon-search.svg') no-repeat center;
+    opacity: 0.2;
+    cursor: pointer;
 
-		&:hover {
-			opacity: 1;
-		}
-	}
+    &:hover {
+      opacity: 1;
+    }
+  }
 
-	span {
-		@media @view-tablets {
-			display: none;
-		}
-	}
+  span {
+    @media @view-tablets {
+      display: none;
+    }
+  }
 
 }
 .search_block {
-	width: 100%;
-	position: absolute;
-	top: 25px;
-	left: 0;
-	padding: 0 30px;
-	box-sizing: border-box;
-	display: none;
+  width: 100%;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  padding: 0 30px;
+  box-sizing: border-box;
+  display: none;
 }
 .search_block input {
-	line-height: 20px;
-	outline: none;
-	height: 20px;
-	width: 100%;
-	padding-right: 30px;
-	box-sizing: border-box;
-	border: none;
-	border-bottom: 1px solid #000;
+  line-height: 20px;
+  outline: none;
+  height: 20px;
+  width: 100%;
+  padding-right: 30px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid #000;
 }
