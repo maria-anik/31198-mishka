@@ -29,9 +29,8 @@
 
   @media @view-desktop {
     flex-direction: column;
-    width:~"calc(33.33% - 33.33px)";
+    width: ~"calc(33.33% - 33.33px)";
     flex-grow: 0;
-    /*margin: 0 25px;*/
     margin-right: 50px;
     margin-bottom: 50px;
 
@@ -45,7 +44,7 @@
 
   @media @view-tablets {
     width: 50%;
-    flex-shrink:0;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
@@ -70,7 +69,7 @@
 
   @media @view-tablets {
     width: 50%;
-    flex-shrink:0
+    flex-shrink: 0;
   }
 
   @media @view-desktop {
@@ -85,6 +84,10 @@
   font-weight: 700;
   font-size: 17px;
   margin-bottom: 20px;
+
+  &:hover {
+    opacity: 0.6;
+  }
 
   @media @view-tablets {
     font-size: 20px;

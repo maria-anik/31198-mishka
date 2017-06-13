@@ -1,12 +1,12 @@
 .contact {
-  margin-bottom: 50px 0;
+  padding-top: 50px;
 
-    @media @view-tablets {
-    margin-bottom: 0 0 100px;
+  @media @view-tablets {
+    padding: 0 0 100px;
   }
 
   @media @view-desktop {
-    padding-top: 90px;
+    padding: 90px 0 105px;
 
   }
 
@@ -22,7 +22,7 @@
       height: 80px;
       width: 70px;
       top: -15px;
-      background: url('@{img-path}/icon-flag.svg') no-repeat center;
+      background: url("@{img-path}/icon-flag.svg") no-repeat center;
     }
   }
 }
@@ -64,14 +64,14 @@
 .contact_map {
   height: 460px;
   margin: 0px -30px 40px;
-  background: url('@{img-path}/map-mobile@1x.jpg') no-repeat center;
+  background: url("@{img-path}/map-mobile@1x.jpg") no-repeat center;
 
   @media @view-tablets {
     background-size: cover;
   }
 
   @media @view-desktop {
-    width: ~'calc(50% - 30px)';
+    width: ~"calc(50% - 30px)";
     top: -70px;
     margin: 0;
     position: absolute;

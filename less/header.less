@@ -5,8 +5,16 @@
   position: absolute;
   top: 0px;
   right: 30px;
-  background: url('@{img-path}/icon-menu-open.svg') no-repeat center;
+  background: url("@{img-path}/icon-menu-open.svg") no-repeat center;
   cursor: pointer;
+
+  @media @view-tablets {
+    display: none;
+  }
+
+  &.open {
+    background-color: red;
+  }
 }
 .header_search.active .search_block {
   display: block;
@@ -30,6 +38,7 @@
   &>.container {
     position: relative;
     display: flex;
+    flex-direction: column;
   }
 
   @media @view-tablets {
@@ -103,22 +112,27 @@
   }
 }
 .header_menu {
-  left: 0;
   background: #fff;
-  position: absolute;
   width: 100%;
-  display: none;
   z-index: 20;
-  top: 56px;
+
+  &.js {
+    display: none;
+    position: absolute;
+    top: 56px;
+    left: 0;
+  }
 
   @media @view-tablets {
     position: relative;
     top: inherit;
     display: flex;
-  }
 
-  @media @view-desktop {
-
+    &.js {
+      position: relative;
+      top: inherit;
+      display: flex;
+    }
   }
 
 }
@@ -133,6 +147,10 @@
   font-weight: 700;
   border-bottom: 1px solid #ececec;
   position: relative;
+
+  &:first-child {
+    border-top: 1px solid #ececec;
+  }
 
   &:hover {
     text-decoration: none;
@@ -162,7 +180,7 @@
       width: 30px;
       height: 30px;
       margin-right: 25px;
-      background: url('@{img-path}/icon-cart.svg') no-repeat center;
+      background: url("@{img-path}/icon-cart.svg") no-repeat center;
       position: absolute;
       left: 30px;
       top: 25px;
@@ -251,7 +269,7 @@
   @media @view-tablets {
     width: 20px;
     height: 20px;
-    background: url('@{img-path}/icon-search.svg') no-repeat center;
+    background: url("@{img-path}/icon-search.svg") no-repeat center;
     opacity: 0.2;
     cursor: pointer;
 

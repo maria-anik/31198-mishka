@@ -1,12 +1,9 @@
 .reviews {
+  padding: 30px 0;
 
   @media @view-tablets {
-      margin-bottom: 142px;
-    }
-
-    @media @view-desktop {
-    }
-
+      margin-bottom: 112px;
+  }
 
   .container {
     @media @view-tablets {
@@ -15,13 +12,13 @@
       padding-bottom: 70px;
 
       &:after {
-        content:"";
-        width: ~'calc(100% - 100px)';
+        content: "";
+        width: ~"calc(100% - 100px)";
         height: 34px;
         position: absolute;
         bottom: -97px;
         left: 50px;
-        background: url('@{img-path}/zigzag-line.svg') repeat-x center;
+        background: url("@{img-path}/zigzag-line.svg") repeat-x center;
       }
     }
 
@@ -29,7 +26,7 @@
       padding-bottom: 95px;
 
       &:after {
-        width: ~'calc(100% - 60px)';
+        width: ~"calc(100% - 60px)";
         left: 30px;
       }
     }
@@ -104,11 +101,11 @@
   }
 
   &--left {
-    background: url('@{img-path}/icon-left-arrow.svg') no-repeat center;
+    background: url("@{img-path}/icon-left-arrow.svg") no-repeat center;
   }
 
   &--right {
-    background: url('@{img-path}/icon-right-arrow.svg') no-repeat center;
+    background: url("@{img-path}/icon-right-arrow.svg") no-repeat center;
   }
 }
 .reviews_back {
