@@ -1,84 +1,131 @@
 
 .product {
-	@media @view-desktop {
-		margin-top: 120px; 
-	}
+  padding: 30px 0;
 
-	.main-section_mark { 
-		color: #63d1bb; 
-		text-transform: uppercase; 
-		font-weight: 700; 
-		font-size: 17px; 
-		line-height: 20px; 
-	}
+  @media @view-tablets {
+    margin: 90px 0 125px;
+  }
 
-	.main-section_top {
-		@media @view-tablets {
-			margin-bottom: 50px;
-		}
-	}
+  .main-section_mark {
+    color: #63d1bb;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 18px;
+  }
 
+  .main-section_top {
+    @media @view-tablets {
+      margin-bottom: 50px;
+    }
+  }
+
+  .main-section_title {
+      .title;
+      font-size: 25px;
+      margin-bottom: 0;
+
+      @media @view-tablets {
+        margin-bottom: 30px;
+      }
+  }
+
+  .container {
+    position: relative;
+
+    @media @view-tablets {
+      &:after {
+        content: "";
+        width: ~"calc(100% - 100px)";
+        height: 34px;
+        position: absolute;
+        bottom: -103px;
+        left: 50px;
+        background: url("@{img-path}/zigzag-line.svg") repeat-x center;
+      }
+    }
+
+    @media @view-desktop {
+      &:after {
+        width: ~"calc(100% - 60px)";
+        left: 30px;
+      }
+    }
+
+  }
 }
-
-
 .product_cont {
-	@media @view-tablets {
-		position: relative;
-		padding-right: 380px;
-	}
+  @media @view-tablets {
+    position: relative;
+    padding-right: 376px;
+  }
 
-	@media @view-desktop {
-		padding-right: 580px;
-	}
+  @media @view-desktop {
+    padding-right: 588px;
+  }
 }
-	
-.product_info { 
-	margin-bottom: 40px; 
-}
-.product_tb { 
-	display: flex; 
-	flex-direction: column; 
-}
-.product_tb-row { 
-	display: flex; 
-	border-bottom: 1px solid #ececec; 
-	padding: 10px 0;
-}
-.product_tb-name { 
-	flex-basis: 100px;  
-}
-.product_tb-info { 
-	flex-grow: 1; 
-}
+.product_info {
+  margin-bottom: 30px;
 
-.product_img { 
-	img {
-		width:100%; 
-		height: auto; 
-	}
+  @media @view-tablets {
+    margin-bottom: 53px;
+  }
 
-	@media @view-tablets {
-		position: absolute;
-		right: 0;
-		width: 335px; top: 0;  
-	}
-
-	@media @view-desktop {
-		width: 50%; 
-		top: -150px; 
-		z-index: -1;
-	}
-		 
+  @media @view-desktop {
+    margin-bottom: 105px;
+  }
 }
-.product_price { 
-	text-align: center; 
-	font-weight: 700; 
-	margin: 20px 0 20px; 
-	font-size: 17px; 
-	width: 100%; 
+.product_tb {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 
-	@media @view-desktop {
-		font-size: 20px; 
-		line-height: 24px
-	}
+  @media @view-tablets {
+    margin-top: 35px;
+  }
+  @media @view-desktop {
+    margin-top: 48px;
+  }
+}
+.product_tb-row {
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  padding: 5px 0;
+}
+.product_tb-name {
+  flex-basis: 100px;
+}
+.product_tb-info {
+  flex-grow: 1;
+}
+.product_img {
+  img {
+    width:100%;
+    height: auto;
+  }
+
+  @media @view-tablets {
+    position: absolute;
+    right: 0;
+    width: 335px; top: 0;
+  }
+
+  @media @view-desktop {
+    width: 525px;;
+    top: -160px;
+    z-index: -1;
+  }
+
+}
+.product_price {
+  text-align: center;
+  font-weight: 700;
+  margin: 20px 0 35px;
+  font-size: 17px;
+  width: 100%;
+
+  @media @view-tablets {
+    font-size: 20px;
+    line-height: 24px
+  }
 }
