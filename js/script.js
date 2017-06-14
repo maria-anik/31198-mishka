@@ -1,45 +1,32 @@
-var container, container_new, big;
 
-$(document).ready(function(){
-  $('.header_menu').addClass('js');
-  $('.header_menu-btn').click(function(){
-    if($(this).hasClass('open')) {
-      $('.header_menu').slideUp();
-      $(this).removeClass('open');
+window.onload = function() {
+  document.querySelector('.header_menu').classList.add('js');
+  menu_btn = document.querySelector('.header_menu-btn');
+  menu_btn.onclick = function() {
+    if(menu_btn.classList.contains('open')) {
+      document.querySelector('.header_menu').classList.add('hide');
+      menu_btn.classList.remove('open');
     }
     else {
-      $('.header_menu').slideDown();
-      $(this).addClass('open');
+      menu_btn.classList.add('open');
+      document.querySelector('.header_menu').classList.remove('hide');
+      document.querySelector('.header_menu').classList.add('show');
     }
-  });
-});
+  }
+};
 
-$(window).load(function(){
-  container=$('.header_top>.container').outerWidth();
-  if (container<700) {
-    big=false;
+window.onresize = function(event) {
+    if (window.innerWidth>767) {
+    document.querySelector('.header_menu').classList.remove('show');
+    document.querySelector('.header_menu').classList.remove('hide');
+    document.querySelector('.header_menu-btn').classList.remove('open');
+    document.querySelector('.header').classList.remove('open');
   }
   else {
-    big=true;
-  }
-});
-
-$(window).resize(function(){
-  container_new=$('.header_top>.container').outerWidth();
-  if(container_new!=container) {
-    container=container_new;
-
-    if ((container<700)&&(big)) {
-        $('.header_menu').css('display','block');
-        $('.header_menu').hide().css('display','none');
-        $('.header_menu-btn').removeClass('open');
-        big=false;
+    if (!document.querySelector('.header').classList.contains('header--mob')) {
+      document.querySelector('.header').classList.add('header--mob');
+      document.querySelector('.header_menu').classList.add('hide');
+      document.querySelector('.header_menu-btn').classList.remove('open');
     }
-    else if ((container>700)&&(!big)) {
-      $('.header_menu').show().css('display','flex');
-      $('.header_menu-btn').removeClass('open');
-      big=true;
-    };
-
-  };
-});
+  }
+};

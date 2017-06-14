@@ -6,10 +6,22 @@ body {
   font-size: @fz;
   line-height: @flh;
   color: @color-main_grey;
+  position: relative;
 
   @media @view-tablets {
     font-size: 17px;
     line-height: 30px;
+  }
+
+  &.popup:after {
+    content:"";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 20;
+    background: rgba(255,255,255,0.9)
   }
 
 }

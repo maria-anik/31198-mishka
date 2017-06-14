@@ -89,6 +89,10 @@
     opacity: 0.6;
   }
 
+  &:active {
+    opacity: 0.3;
+  }
+
   @media @view-tablets {
     font-size: 20px;
     line-height: 24px;
@@ -99,6 +103,7 @@
   margin-top: 30px;
   border-top: 1px solid #ededed;
   display: flex;
+  align-items: flex-end;
 
   @media @view-tablets {
     margin-top: auto;
@@ -109,6 +114,30 @@
   color: @color-black;
   font-weight: 700;
   padding-top: 20px;
+}
+
+.catalog_buy-basket {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+  /*background: url(../img/icon-cart.svg) no-repeat center;*/
+  fill: #221f1f;
+  opacity: 0.2;
+  box-sizing: border-box;
+
+  svg {
+    display: block;
+  }
+
+  &:hover {
+    fill: #63d1bb;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+    fill: #63d1bb;
+  }
 }
 
 .catalog_info {

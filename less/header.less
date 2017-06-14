@@ -115,13 +115,28 @@
   background: #fff;
   width: 100%;
   z-index: 20;
+  display: block;
+  height: auto;
+  transition: all 0.3s ease;
 
   &.js {
     display: none;
     position: absolute;
     top: 56px;
     left: 0;
+
+    &.show {
+      display: block;
+    }
+
+    &.hide {
+      display: block;
+      height: 0px;
+      overflow:hidden;
+    }
   }
+
+
 
   @media @view-tablets {
     position: relative;
@@ -206,6 +221,7 @@
 
     &:first-child {
       padding-left: 0;
+      border-top: 0;
     }
 
     &:last-child {
@@ -232,7 +248,7 @@
     }
 
     &--link {
-      padding: 10px 19px;
+      padding: 0px 19px;
       font-size: 15px;
     }
   }
