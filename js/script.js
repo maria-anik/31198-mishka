@@ -13,6 +13,21 @@ window.onload = function() {
       document.querySelector('.header_menu').classList.add('show');
     }
   }
+  document.querySelector('.btn-order').onclick = function() {
+    document.querySelector('body').classList.add('popup');
+    document.querySelector('.popup_catalog').classList.add('open');
+  };
+  document.querySelector('.popup_close').onclick = function() {
+    document.querySelector('body').classList.remove('popup');
+    document.querySelector('.popup_catalog').classList.remove('open');
+  };
+
+  document.querySelector('body.popup').onclick = function() {
+    console.log('h');
+    document.querySelector('body').classList.remove('popup');
+    document.querySelector('.popup_catalog').classList.remove('open');
+  };
+
 };
 
 window.onresize = function(event) {

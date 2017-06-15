@@ -289,10 +289,27 @@
     </footer>
 
     <div class="popup_catalog">
-      <div class="popup_catalog-title">Добавить в карзину</div>
-      <div class="popup_catalog-text">Выберите размер</div>
+      <div class="popup_close"></div>
+      <form action="#">
+        <div class="popup_catalog-title">Добавить в карзину</div>
+        <div class="popup_catalog-text">Выберите размер</div>
+        <div class="popup_radio">
+          <div class="popup_radio-item">
+            <input type="radio" checked id="popup_radio-item-1" name="popup_radio-item">
+            <label for="popup_radio-item-1" >S</label>
+          </div>
+          <div class="popup_radio-item">
+            <input type="radio" id="popup_radio-item-2" name="popup_radio-item">
+            <label for="popup_radio-item-2" >M</label>
+          </div>
+          <div class="popup_radio-item">
+            <input type="radio" id="popup_radio-item-3" name="popup_radio-item">
+            <label for="popup_radio-item-3" >L</label>
+          </div>
+        </div>
+        <a href="#" class="btn popup_catalog-btn">Добавить</a>
+      </form>
 
-      <a href="#" class="btn popup_catalog-btn">Добавить</a>
     </div>
   </body>
 </html>
