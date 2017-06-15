@@ -1,0 +1,40 @@
+.popup_catalog {
+  display: none;
+  width: 568px;
+  max-width: ~"calc(100% - 60px)";
+  background: #fff;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.25);
+  z-index: 30;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translate(0,-50%);
+  margin: auto;
+  box-sizing: border-box;
+  padding: 30px 50px;
+  text-align: center;
+
+
+  @media @view-tablets {
+    padding: 45px 105px;
+  }
+
+}
+
+.popup_catalog-title {
+  font-size: 25px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  @media @view-tablets {
+    font-size: 30px;
+  }
+}
+
+.popup_catalog-text {
+  font-size: 17px;
+  line-height: 30px;
+}
