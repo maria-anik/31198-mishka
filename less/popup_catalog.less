@@ -47,13 +47,21 @@
 }
 
 .popup_close {
-  width: 20px;
-  height: 20px;
-  background: red;
+  width: 25px;
+  height: 25px;
+  background: url("@{img-path}/icon-menu-close.svg") no-repeat center;
   position:absolute;
-  top: -20px;
+  top: -35px;
   right: 0;
-  cursor: pointer
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .popup_radio {

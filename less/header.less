@@ -13,7 +13,7 @@
   }
 
   &.open {
-    background-color: red;
+    background: url("@{img-path}/icon-menu-close.svg") no-repeat center;
   }
 }
 .header_search.active .search_block {
@@ -118,21 +118,21 @@
   display: block;
   height: auto;
   transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 
   &.js {
-    display: none;
+    /*display: none;*/
+    display:block;
     position: absolute;
     top: 56px;
     left: 0;
+    height: 0;
+    overflow:hidden;
 
-    &.show {
-      display: block;
-    }
-
-    &.hide {
-      display: block;
-      height: 0px;
-      overflow:hidden;
+    &.open {
+      height: auto;
     }
   }
 
@@ -142,14 +142,23 @@
     position: relative;
     top: inherit;
     display: flex;
+    height: auto;
+    overflow: visible;
 
     &.js {
       position: relative;
       top: inherit;
       display: flex;
+      height: auto;
+      overflow: visible;
     }
   }
 
+}
+.header_menu-cont {
+  display:inherit;
+  width: 100%;
+  position: relative;
 }
 .header_menu-item {
   display: block;

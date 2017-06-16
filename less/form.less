@@ -22,6 +22,7 @@
   }
 }
 .form_group {
+
   @media @view-tablets {
     padding: 50px 0 25px;;
 
@@ -45,6 +46,24 @@
     }
   }
 
+  @media @view-desktop {
+    &--check {
+      .container {
+        padding-right: 115px;
+      }
+
+      .form_title span {
+        padding-top: 0;
+      }
+    }
+
+    &--radio {
+      .form_title span {
+        padding-top: 0;
+      }
+    }
+  }
+
   &--dark {
     @media @view-tablets {
       background: @fone_grey;
@@ -57,6 +76,13 @@
     }
   }
 }
+.form_group--radio .form_title {
+  margin-bottom: 31px;
+}
+.form_group--check .form_title {
+  margin-bottom: 28px;
+}
+
 .form_block {
   margin-bottom: 27px;
 
@@ -119,6 +145,10 @@
   &:-moz-placeholder           {opacity: 0.3;}/* Firefox 18- */
   &:-ms-input-placeholder      {opacity: 0.3;}
 
+  &:hover, &:focus {
+    border-color: #62d1ba;
+  }
+
   @media @view-tablets {
     padding: 0 15px;
     font-size: 19px;
@@ -175,22 +205,24 @@ textarea.input-text {
       background: transparent;
       padding-top: 6px;
     }
+
+    @media @view-desktop {
+      padding-top: 10px;
+    }
   }
 }
-.form_group--radio .form_title {
-  margin-bottom: 31px;
-}
-.form_group--check .form_title {
-  margin-bottom: 28px;
-}
+
 .form-check {
   position: relative;
   min-height: 41px;
   margin-bottom: 20px;
 
   @media @view-tablets {
-    width: 50%;
     margin-bottom: 36px;
+
+    &:nth-child(2n+1) {
+      width: 263px;
+    }
   }
   @media @view-desktop {
     width: 33.33%
@@ -345,6 +377,7 @@ textarea.input-text {
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 30px;
+  letter-spacing: 0.35px;
 
   @media @view-tablets {
     margin-bottom: 0;
@@ -356,6 +389,7 @@ textarea.input-text {
 .form_btn {
   background: #fff;
   outline: none;
+  padding: 0 30px;
 
   @media @view-tablets {
     float: left;
