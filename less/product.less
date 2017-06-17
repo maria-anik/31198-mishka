@@ -1,8 +1,13 @@
 
 .product {
   padding: 30px 0;
+  margin-bottom: 20px;
 
   @media @view-tablets {
+    margin: 15px 0 68px;
+  }
+
+  @media @view-desktop {
     margin: 90px 0 125px;
   }
 
@@ -15,6 +20,8 @@
   }
 
   .main-section_top {
+    margin-bottom: 23px;
+
     @media @view-tablets {
       margin-bottom: 50px;
     }
@@ -23,7 +30,8 @@
   .main-section_title {
       .title;
       font-size: 25px;
-      margin-bottom: 0;
+      margin-bottom: 5px;
+      letter-spacing: -1.0px;
 
       @media @view-tablets {
         margin-bottom: 30px;
@@ -90,7 +98,7 @@
 .product_tb-row {
   display: flex;
   border-bottom: 1px solid #ececec;
-  padding: 5px 0;
+  padding: 7px 0;
 }
 .product_tb-name {
   flex-basis: 100px;
@@ -120,12 +128,13 @@
 .product_price {
   text-align: center;
   font-weight: 700;
-  margin: 20px 0 35px;
+  margin: 18px 0 26px;
   font-size: 17px;
   width: 100%;
 
   @media @view-tablets {
     font-size: 20px;
-    line-height: 24px
+    line-height: 24px;
+    margin: 20px 0 35px;
   }
 }

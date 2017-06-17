@@ -50,9 +50,9 @@
 .social_item {
   width: 40px;
   height: 40px;
-  background: red;
   fill: #000;
   margin-right: 20px;
+  position: relative;
 
   &:last-child {
     margin-right: 0;
@@ -64,14 +64,24 @@
     color: transparent;
   }
 
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    transition: all 0.3s ease;
+  }
+
   &:hover {
     fill: #46c1ae;
   }
-/*
+
   &:active {
     opacity: .3;
   }
-*/
+/*
   &--in {
     background: url("@{img-path}/icon-insta.svg") no-repeat center;
   }
@@ -83,7 +93,7 @@
   &--tr {
     background: url("@{img-path}/icon-twitter.svg") no-repeat center;
   }
-
+*/
 }
 .developer {
   display: flex;

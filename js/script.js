@@ -1,48 +1,69 @@
+var classActive = 'open';
 
-window.onload = function() {
-  document.querySelector('.header_menu').classList.add('js');
-  menu_btn = document.querySelector('.header_menu-btn');
-  menu_btn.onclick = function() {
-    if(menu_btn.classList.contains('open')) {
-      document.querySelector('.header_menu').classList.remove('open');
-      menu_btn.classList.remove('open');
-    }
-    else {
-      menu_btn.classList.add('open');
-      document.querySelector('.header_menu').classList.add('open');
+var header = document.querySelector('.header'),
+    menu = document.querySelector('.header_menu'),
+    menuBtn = document.querySelector('.header_menu-btn');
+
+var orderPopup = document.querySelector('.popup_catalog'),
+  orderBtn = document.querySelector('.btn-order'),
+  orderPopupCloseBtn = document.querySelector('.popup_close'),
+  body = document.querySelector('body'),
+  bodyClassPopup = 'popup';
+
+
+/****** MENU FUNCTIONALITY *******/
+menu.classList.add('js');
+menuBtn.addEventListener('click', function() {
+  if (menuBtn.classList.contains(classActive)) {
+    menu.classList.remove(classActive);
+    menuBtn.classList.remove(classActive);
+  } else {
+    menuBtn.classList.add(classActive);
+    menu.classList.add(classActive);
+  }
+});
+
+window.onresize = function () {
+  if (window.innerWidth > 767) {
+    menu.classList.remove(classActive);
+    menuBtn.classList.remove(classActive);
+    header.classList.remove(classActive);
+  } else {
+    if (!header.classList.contains('header--mob')) {
+      header.classList.add('header--mob');
+      menuBtn.classList.remove(classActive);
     }
   }
-  document.querySelector('.btn-order').onclick = function() {
-    document.querySelector('body').classList.add('popup');
-    document.querySelector('.popup_catalog').classList.add('open');
-  };
-  document.querySelector('.popup_close').onclick = function() {
-    document.querySelector('body').classList.remove('popup');
-    document.querySelector('.popup_catalog').classList.remove('open');
-  };
+};
 
-  document.onclick = function(event) {
-      if ( ((event.target).closest('.popup_catalog').length)) {
-        if(document.querySelector('body').classList.contains('popup')) {
-          console.log('h');
-          document.querySelector('body').classList.remove('popup');
-          document.querySelector('.popup_catalog').classList.remove('open');
+
+/****** POPUP FUNCTIONALITY *******/
+if (orderBtn && orderPopup) {
+  orderBtn.addEventListener('click', function () {
+    body.classList.add(bodyClassPopup);
+    orderPopup.classList.add(classActive);
+  });
+  orderPopupCloseBtn.addEventListener('click', function () {
+    body.classList.remove(bodyClassPopup);
+    orderPopup.classList.remove(classActive);
+  });
+
+  document.addEventListener('click', function (event) {
+    if (document.documentElement.closest) {
+      // CLOSE MENU
+      if (window.innerWidth < 768) {
+        if (!event.target.classList.contains('header_menu-btn') && event.target.closest('.header_menu') === null && menu.classList.contains(classActive)) {
+          menu.classList.remove(classActive);
+          menuBtn.classList.remove(classActive);
         }
       }
-  };
 
-};
-
-window.onresize = function(event) {
-    if (window.innerWidth>767) {
-    document.querySelector('.header_menu').classList.remove('open');
-    document.querySelector('.header_menu-btn').classList.remove('open');
-    document.querySelector('.header').classList.remove('open');
-  }
-  else {
-    if (!document.querySelector('.header').classList.contains('header--mob')) {
-      document.querySelector('.header').classList.add('header--mob');
-      document.querySelector('.header_menu-btn').classList.remove('open');
+      // CLOSE POPUP
+      if ((event.target !== orderBtn) && (event.target !== orderPopupCloseBtn) && event.target.closest('.popup_catalog') === null && body.classList.contains(bodyClassPopup)) {
+        console.log('h');
+        body.classList.remove(bodyClassPopup);
+        orderPopup.classList.remove(classActive);
+      }
     }
-  }
-};
+  });
+}
