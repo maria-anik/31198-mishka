@@ -3,6 +3,10 @@
   margin-bottom: 7px;
 
   @media @view-tablets {
+      margin-bottom: 118px;
+      padding-top: 0;
+  }
+  @media @view-desktop {
       margin-bottom: 112px;
   }
 
@@ -26,19 +30,26 @@
   }
 
   .container {
+    &:after {
+        content: "";
+        width: 100%;
+        height: 8px;
+        position: absolute;
+        bottom: -52px;
+        left: 0px;
+        background: url("@{img-path}/zigzag-line.svg") repeat-x center;
+        background-size: contain;
+    }
+
     @media @view-tablets {
       position: relative;
       padding-top: 75px;
       padding-bottom: 45px;
 
       &:after {
-        content: "";
-        width: ~"calc(100% - 100px)";
-        height: 34px;
-        position: absolute;
-        bottom: -97px;
-        left: 50px;
-        background: url("@{img-path}/zigzag-line.svg") repeat-x center;
+        height: 16px;
+        bottom: -85px;
+        left: 0px;
       }
     }
 
@@ -47,8 +58,11 @@
       padding-bottom: 95px;
 
       &:after {
+        bottom: -97px;
         width: ~"calc(100% - 60px)";
+        height: 22px;
         left: 30px;
+        background-size: contain;
       }
     }
 
@@ -141,6 +155,7 @@
   border: 1px solid #ececec;
   box-sizing: border-box;
   cursor: pointer;
+  transition: all 0.2s ease;
 
   &:hover {
     opacity: 0.6;

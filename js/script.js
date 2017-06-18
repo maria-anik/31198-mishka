@@ -1,8 +1,15 @@
-var classActive = 'open';
+var classActive = 'open',
+    classHide = 'hide';
 
 var header = document.querySelector('.header'),
     menu = document.querySelector('.header_menu'),
-    menuBtn = document.querySelector('.header_menu-btn');
+    menuBtn = document.querySelector('.header_menu-btn'),
+    videoImg = document.querySelector('.video_img'),
+    videoIframe = document.querySelector('.video_iframe iframe'),
+    searchBtn = document.querySelector('.search_btn'),
+    searchBlock = document.querySelector('.search_block'),
+    searchExit = document.querySelector('.search_block-exit');
+
 
 var orderPopup = document.querySelector('.popup_catalog'),
   orderBtn = document.querySelector('.btn-order'),
@@ -22,6 +29,30 @@ menuBtn.addEventListener('click', function() {
     menu.classList.add(classActive);
   }
 });
+if (videoImg) {
+  videoImg.addEventListener('click', function() {
+    if (videoImg.classList.contains(classHide)) {
+      videoImg.classList.remove(classHide);
+      videoIframe.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
+    }
+    else {
+      videoImg.classList.add(classHide);
+      videoIframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+    }
+
+  });
+}
+
+if (searchBtn) {
+  searchBtn.addEventListener('click', function() {
+      searchBlock.classList.add(classActive);
+  });
+  searchExit.addEventListener('click', function() {
+      searchBlock.classList.remove(classActive);
+  });
+}
+
+
 
 window.onresize = function () {
   if (window.innerWidth > 767) {
@@ -39,9 +70,12 @@ window.onresize = function () {
 
 /****** POPUP FUNCTIONALITY *******/
 if (orderBtn && orderPopup) {
-  orderBtn.addEventListener('click', function () {
+  document.querySelector('.btn-order').addEventListener('click', function (event) {
+    event.preventDefault();
+    console.log('popup open');
     body.classList.add(bodyClassPopup);
     orderPopup.classList.add(classActive);
+    return false;
   });
   orderPopupCloseBtn.addEventListener('click', function () {
     body.classList.remove(bodyClassPopup);
@@ -66,4 +100,7 @@ if (orderBtn && orderPopup) {
       }
     }
   });
-}
+};
+
+
+

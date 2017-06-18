@@ -27,10 +27,17 @@
 
     &:after {
       content: "";
-      height: 34px;
+      height: 23px;
       width: 100%;
-      background: url("@{img-path}/zigzag-fill.svg") repeat-x center;
+      background: url("@{img-path}/bg-zigzag-fill.svg") repeat-x center;
       position: absolute;
+      bottom: 0px;
+      background-size: contain;
+    }
+  }
+  @media @view-desktop {
+    &:after {
+      height: 37px;
       bottom: -15px;
     }
   }
@@ -79,6 +86,7 @@
   font-size: 19px;
   line-height: 24px;
   flex-grow: 1;
+  transition: all 0.3s ease;
 
   @media @view-tablets {
     width: 50%;
@@ -86,6 +94,7 @@
     margin: 0;
     font-size: 20px;
     line-height: 30px;
+    align-items: top;
   }
 
   &--1 {
@@ -127,4 +136,5 @@
   margin-left: auto;
   fill: #149080;
   opacity: 0.5;
+  transition: all 0.2s ease;
 }

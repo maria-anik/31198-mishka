@@ -11,6 +11,7 @@
 
     @media @view-tablets {
       flex-direction: row;
+      align-items: center;
     }
   }
 }
@@ -19,6 +20,7 @@
   display: none;
   align-items: center;
   fill: #000;
+  transition: all 0.2s ease;
 
   &:hover {
     fill: #46c1ae;
@@ -42,10 +44,12 @@
   border-bottom: 1px solid #e5e5e5;
 
   @media @view-tablets {
-    width: 150px;
+    width: 160px;
     padding: 0;
     border: none;
+    margin-left: 75px;
   }
+
 }
 .social_item {
   width: 40px;
@@ -71,7 +75,7 @@
     bottom: 0;
     right: 0;
     margin: auto;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
   }
 
   &:hover {
@@ -81,31 +85,19 @@
   &:active {
     opacity: .3;
   }
-/*
-  &--in {
-    background: url("@{img-path}/icon-insta.svg") no-repeat center;
-  }
-
-  &--fb {
-    background: url("@{img-path}/icon-fb.svg") no-repeat center;
-  }
-
-  &--tr {
-    background: url("@{img-path}/icon-twitter.svg") no-repeat center;
-  }
-*/
 }
 .developer {
   display: flex;
-  vertical-align: middle;
   font-weight: 700;
   color: #000;
   font-size: 19px;
   text-decoration: none;
-  line-height: 40px;
+  line-height: 44px;
   fill: #63d1bb;
   padding: 20px 0;
   justify-content: center;
+  align-items: flex-end;
+  transition: all 0.2s ease;
 
   &:hover {
     fill: #46c1ae;
@@ -117,8 +109,6 @@
 
   span {
     display: flex;
-    vertical-align: top;
-    height: 40px;
     align-items: center;
     margin-left: 30px;
   }

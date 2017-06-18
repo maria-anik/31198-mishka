@@ -1,14 +1,16 @@
+.form {
 
-.form>.container {
   @media @view-desktop {
-    padding-left: 205px;
+    &>.container {
+      padding-left: 205px;
+    }
+
+    .container {
+      padding-right: 205px;
+    }
   }
 }
-.form .container {
-  @media @view-desktop {
-    padding-right: 205px;
-  }
-}
+
 .form_content {
   @media @view-tablets {
     flex-grow: 1;
@@ -21,10 +23,18 @@
     }
   }
 }
+
 .form_group {
+  &--inputs {
+    margin-bottom: 27px;
+  }
 
   @media @view-tablets {
-    padding: 50px 0 25px;;
+    padding: 50px 0 25px;
+
+    &--inputs {
+      margin-bottom: 0px;
+    }
 
     &--radio {
       padding: 50px 0 15px;
@@ -99,6 +109,7 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  position: relative;
 
   @media @view-tablets {
     flex-direction: row;
@@ -117,6 +128,22 @@
       flex-grow: 1;
     }
   }
+
+  &:hover {
+    .form-input_img {
+      fill: #62d1ba;
+    }
+
+    .input-text {
+      border-color: #62d1ba;
+    }
+  }
+}
+.form-input_img {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  fill: #cccccc
 }
 .form-input_name {
   font-size: 17px;
@@ -137,13 +164,14 @@
   color: @color-main_grey;
   background: transparent;
   outline: none;
+  transition: all 0.2s ease;
 
   &::-webkit-input-placeholder {opacity: 0.3;}
   &::-moz-placeholder          {opacity: 0.3;}/* Firefox 19+ */
   &:-moz-placeholder           {opacity: 0.3;}/* Firefox 18- */
   &:-ms-input-placeholder      {opacity: 0.3;}
 
-  &:hover, &:focus {
+  &:focus {
     border-color: #62d1ba;
   }
 
@@ -258,6 +286,7 @@ textarea.input-text {
       height: 40px;
       box-sizing: border-box;
       border: 2px solid @color-main_grey;
+      transition: border-color 0.2s ease;
 
       @media @view-tablets {
         width: 54px;
@@ -324,6 +353,7 @@ textarea.input-text {
       height: 40px;
       box-sizing: border-box;
       border: 2px solid @color-main_grey;
+      transition: border-color 0.2s ease;
 
       @media @view-tablets {
         width: 52px;

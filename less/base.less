@@ -69,20 +69,27 @@ body {
   position: relative;
 
   @media @view-tablets {
-    height: 250px;
+    height: 235px;
 
     &:after {
       content: "";
-      height: 34px;
+      height: 23px;
       width: 100%;
-      background: url("@{img-path}/zigzag-fill.svg") repeat-x center;
+      background: url("@{img-path}/bg-zigzag-fill.svg") repeat-x center;
       position: absolute;
-      bottom: -20px;
+      bottom: -0px;
+      background-size: contain;
     }
   }
 
+  @media @view-desktop {
+    height: 250px;
 
-
+    &:after {
+      height: 34px;
+      bottom: -22px;
+    }
+  }
 }
 
 .page-top_title {
@@ -91,13 +98,13 @@ body {
 }
 
 .page-wrapper {
-  padding: 22px 0 55px;
+  padding: 25px 0 55px;
 
   @media @view-tablets {
-    padding: 40px 0 50px;
+    padding: 60px 0 50px;
   }
 
   @media @view-desktop {
-    padding: 60px 0 40px;
+    padding: 125px 0 50px;
   }
 }

@@ -1,8 +1,11 @@
 .catalog {
   display: flex;
   flex-direction: column;
+  margin-top: 5px;
 
-
+  @media @view-tablets {
+    margin-top: 10px;
+  }
   @media @view-desktop {
     flex-direction: row;
     flex-wrap: wrap;
@@ -13,6 +16,7 @@
   flex-grow: 1;
   margin-bottom: 30px;
   box-sizing: border-box;
+  transition: all 0.2s ease;
 
   &:hover {
     box-shadow: 0 6px 10px rgba(0,0,0,0.1);
@@ -25,7 +29,7 @@
 
   @media @view-tablets {
     display: flex;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 
   @media @view-desktop {
@@ -86,6 +90,7 @@
   font-weight: 700;
   font-size: 17px;
   margin-bottom: 20px;
+  transition: all 0.2s ease;
 
   &:hover {
     opacity: 0.6;
@@ -122,10 +127,10 @@
   width: 30px;
   height: 30px;
   padding: 5px;
-  /*background: url(../img/icon-cart.svg) no-repeat center;*/
   fill: #221f1f;
   opacity: 0.2;
   box-sizing: border-box;
+  transition: all 0.2s ease;
 
   svg {
     display: block;
