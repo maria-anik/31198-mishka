@@ -8,11 +8,13 @@ var header = document.querySelector('.header'),
     videoIframe = document.querySelector('.video_iframe iframe'),
     searchBtn = document.querySelector('.search_btn'),
     searchBlock = document.querySelector('.search_block'),
-    searchExit = document.querySelector('.search_block-exit');
+    searchExit = document.querySelector('.search_block-exit'),
+    map = document.querySelector('#map');
+    ;
 
 
 var orderPopup = document.querySelector('.popup_catalog'),
-  orderBtn = document.querySelector('.btn-order'),
+  orderBtn = document.querySelectorAll('.btn-order'),
   orderPopupCloseBtn = document.querySelector('.popup_close'),
   body = document.querySelector('body'),
   bodyClassPopup = 'popup';
@@ -72,6 +74,7 @@ window.onresize = function () {
 if (orderBtn && orderPopup) {
   document.querySelector('.btn-order').addEventListener('click', function (event) {
     event.preventDefault();
+    event.stopPropagation();
     console.log('popup open');
     body.classList.add(bodyClassPopup);
     orderPopup.classList.add(classActive);
@@ -102,5 +105,31 @@ if (orderBtn && orderPopup) {
   });
 };
 
+if (map) {
+  ymaps.ready(init);
 
+  function init(){
+
+      var myMap;
+
+      myMap = new ymaps.Map("map", {
+          center: [59.938698, 30.323076],
+          zoom: 13,
+          controls: []
+      });
+      myMap.behaviors.disable('scrollZoom');
+
+      myMap.controls.add("zoomControl", {
+          position: {top: 15, left: 15}
+      });
+
+      var myPlacemark = new ymaps.Placemark([59.938698, 30.323076] , {},
+          { iconLayout: 'default#image',
+            iconImageHref: '../img/icon-map-pin.svg',
+            iconImageSize: [70, 100],
+            iconImageOffset: [-20, -47] });
+
+      myMap.geoObjects.add(myPlacemark);
+  }
+}
 

@@ -5,7 +5,7 @@
     <title>HTML Academy: Мишка</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
   </head>
   <body>
     <svg style="display:none">
@@ -299,8 +299,7 @@
               <span class="contact-info_item-text contact-info_item-text--address">г. Санкт-Петербург, <br>ул. Большая Конюшенная, <br>д. 19/8, офис 101</span>
             </div>
           </div>
-          <div class="contact_map">
-            <div class="contact_map-mark"></div>
+          <div class="contact_map" id="map">
           </div>
           <a href="#contact_form" class="btn btn-contact">Напишите нам</a>
       </div>
@@ -326,7 +325,7 @@
             <svg width="24" height="20"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#foot-tw"></use></svg>
           </a>
         </div>
-        <a href="#" class="developer">Разработано
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="developer">Разработано
           <span>
             <svg width="27px" height="34px"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#foot-dev"></use></svg>
           </span>
