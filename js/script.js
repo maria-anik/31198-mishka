@@ -132,4 +132,3 @@ if (map) {
       myMap.geoObjects.add(myPlacemark);
   }
 }
-
