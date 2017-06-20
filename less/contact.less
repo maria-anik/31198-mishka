@@ -2,12 +2,11 @@
   padding-top: 50px;
 
   @media @view-tablets {
-    padding: 0 0 100px;
+    padding: 0 0 55px;
   }
 
   @media @view-desktop {
     padding: 90px 0 105px;
-
   }
 
   .main-section_title {
@@ -15,6 +14,14 @@
 
     font-size: 18px;
     line-height: 30px;
+
+    @media @view-tablets {
+      margin-bottom: 48px;
+    }
+
+    @media @view-desktop {
+      margin-bottom: 30px;
+    }
   }
 
   .main-section_mark {
@@ -22,8 +29,16 @@
       height: 80px;
       width: 70px;
       top: -15px;
+      right: -10px;
       background: url("@{img-path}/icon-flag.svg") no-repeat center;
     }
+
+    @media @view-desktop {
+      right: inherit;
+      top: -6px;
+      left: -120px;
+    }
+
   }
 }
 
@@ -33,20 +48,22 @@
 
   @media @view-tablets {
     flex-direction: row;
+    margin-bottom: 15px;
   }
 
   @media @view-desktop {
     flex-direction: column;
     padding-right: 570px;
-    margin: 50px 0 50px;
+    margin: 50px 0 45px;
   }
 }
 .contact-info_item {
   display: flex;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
 
   @media @view-tablets {
     width: 50%;
+    margin-bottom: 40px;
   }
 
   @media @view-desktop {
@@ -60,40 +77,92 @@
 }
 .contact-info_item-text {
   flex-grow: 1;
+  transition: all 0.2s ease;
+
+  &--mail {
+    text-decoration: none;
+    color: @color-main_grey;
+
+    &:hover{
+      color: #62d1ba;
+    }
+
+    &:active{
+      opacity: 0.3;
+    }
+
+    span {
+      display: inline-block;
+      border-bottom: 1px solid #62d1ba;
+      vertical-align: top;
+    }
+  }
+
+  &--address {
+    line-height: 30px;
+    margin-top: -4px;
+
+    @media @view-tablets {
+      margin-top: 0px;
+    }
+  }
 }
+
 .contact_map {
-  height: 460px;
+  height: 455px;
   margin: 0px -30px 40px;
-  background: url("@{img-path}/map-mobile@1x.jpg") no-repeat center;
+  background-image: url("@{img-path}/map-mobile@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #eae6dd;
+  position: relative;
+
+  iframe {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  @media @retina {
+      background-image:  url("@{img-path}/map-mobile@2x.jpg");
+  }
 
   @media @view-tablets {
-    background-size: cover;
+    background-image: url("@{img-path}/map-tablet@1x.jpg");
+    margin: 0px -50px 55px;
+  }
+
+  @media (min-width: 768px) and (min-resolution: 144dpi),
+       (min-width: 768px) and (min-resolution: 1.5dppx) {
+    background-image:  url("@{img-path}/map-tablet@2x.jpg");
   }
 
   @media @view-desktop {
+    background-image: url("@{img-path}/map-desktop@1x.jpg");
     width: ~"calc(50% - 30px)";
-    top: -70px;
     margin: 0;
     position: absolute;
-      right: 30px;
-  }
-}
-.contact-info_item-text--mail {
-  text-decoration: none;
-  color: @color-main_grey;
-
-  &:hover{
-    color: #62d1ba;
+    top: -70px;
+    right: 30px;
   }
 
-  &:active{
-    opacity: 0.3;
+  @media (min-width: 1200px) and (min-resolution: 144dpi),
+       (min-width: 1200px) and (min-resolution: 1.5dppx) {
+    background-image:  url("@{img-path}/map-desktop@2x.jpg");
   }
 }
-.contact-info_item-text--mail span {
-  display: inline-block;
-  border-bottom: 1px solid #62d1ba;
+.contact_map-mark {
+  with: 70px;
+  height: 100px;
+  position:absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background: url("@{img-path}/icon-map-pin.svg") no-repeat center;
 }
+
 
 .btn-contact {
   margin-bottom: 40px;

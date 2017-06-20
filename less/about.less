@@ -1,8 +1,13 @@
 .about {
-  padding: 20px 0;
+  padding: 20px 0 15px;
 
   @media @view-tablets {
-    margin-bottom: 35px;
+    padding: 20px 0 10px;
+    margin-bottom: 0px;
+  }
+
+  @media @view-desktop {
+    padding-bottom: 17px;
   }
 
   .main-section_title {
@@ -14,11 +19,16 @@
         margin-bottom: 30px;
       }
   }
+
 }
 
 .about_img {
-  margin: 20px 0;
+  margin: 20px 0 10px;
   height: 45px;
+
+  @media @view-tablets {
+    margin: 20px 0 7px;
+  }
 
   @media @view-desktop {
     margin-bottom: 10px;
@@ -26,30 +36,44 @@
 }
 .about_text {
   font-size: 17px;
+  line-height: 19px;
   font-weight: 700;
   color: #000;
 
   @media @view-tablets {
-    padding-right: 100px;
+    padding-right: 40px;
     font-size: 20px;
     line-height: 22px;
+  }
+  @media @view-desktop {
+    padding-right: 55px;
   }
 }
 .about_cont {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 10px;
 
   @media @view-tablets {
     margin-top: 20px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 500px;
   }
   @media @view-desktop {
     padding-right: 160px;
   }
 }
 .about_item {
+  margin-bottom: 10px;
+
   @media @view-tablets {
-    flex-basis: 50%;
-    max-width: 50%;
+    width: 335px;
+    margin-bottom: 40px;
+  }
+
+  @media @view-desktop {
+    width: 350px;
     margin-bottom: 35px;
   }
 }

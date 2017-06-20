@@ -1,14 +1,16 @@
+.form {
 
-.form>.container {
   @media @view-desktop {
-    padding-left: 205px;
+    &>.container {
+      padding-left: 205px;
+    }
+
+    .container {
+      padding-right: 205px;
+    }
   }
 }
-.form .container {
-  @media @view-desktop {
-    padding-right: 205px;
-  }
-}
+
 .form_content {
   @media @view-tablets {
     flex-grow: 1;
@@ -21,9 +23,18 @@
     }
   }
 }
+
 .form_group {
+  &--inputs {
+    margin-bottom: 27px;
+  }
+
   @media @view-tablets {
-    padding: 50px 0 25px;;
+    padding: 50px 0 25px;
+
+    &--inputs {
+      margin-bottom: 0px;
+    }
 
     &--radio {
       padding: 50px 0 15px;
@@ -45,6 +56,24 @@
     }
   }
 
+  @media @view-desktop {
+    &--check {
+      .container {
+        padding-right: 115px;
+      }
+
+      .form_title span {
+        padding-top: 0;
+      }
+    }
+
+    &--radio {
+      .form_title span {
+        padding-top: 0;
+      }
+    }
+  }
+
   &--dark {
     @media @view-tablets {
       background: @fone_grey;
@@ -57,6 +86,13 @@
     }
   }
 }
+.form_group--radio .form_title {
+  margin-bottom: 31px;
+}
+.form_group--check .form_title {
+  margin-bottom: 28px;
+}
+
 .form_block {
   margin-bottom: 27px;
 
@@ -68,13 +104,12 @@
     display: flex;
     margin-bottom: 0px;
   }
-
-
 }
 .form-input {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
+  position: relative;
 
   @media @view-tablets {
     flex-direction: row;
@@ -93,6 +128,23 @@
       flex-grow: 1;
     }
   }
+
+  &:hover {
+    .form-input_img {
+      fill: #62d1ba;
+    }
+
+    .input-text {
+      border-color: #62d1ba;
+    }
+  }
+}
+.form-input_img {
+  position: absolute;
+  top: 10px;
+  right: 5px;
+  fill: #cccccc;
+  background: #f1f1f1;
 }
 .form-input_name {
   font-size: 17px;
@@ -113,11 +165,16 @@
   color: @color-main_grey;
   background: transparent;
   outline: none;
+  transition: all 0.2s ease;
 
   &::-webkit-input-placeholder {opacity: 0.3;}
   &::-moz-placeholder          {opacity: 0.3;}/* Firefox 19+ */
   &:-moz-placeholder           {opacity: 0.3;}/* Firefox 18- */
   &:-ms-input-placeholder      {opacity: 0.3;}
+
+  &:focus {
+    border-color: #62d1ba;
+  }
 
   @media @view-tablets {
     padding: 0 15px;
@@ -168,6 +225,7 @@ textarea.input-text {
 
   span {
     display: inline-block;
+    vertical-align: top;
     padding-right: 25px;
     background: #fff;
 
@@ -175,22 +233,24 @@ textarea.input-text {
       background: transparent;
       padding-top: 6px;
     }
+
+    @media @view-desktop {
+      padding-top: 10px;
+    }
   }
 }
-.form_group--radio .form_title {
-  margin-bottom: 31px;
-}
-.form_group--check .form_title {
-  margin-bottom: 28px;
-}
+
 .form-check {
   position: relative;
   min-height: 41px;
   margin-bottom: 20px;
 
   @media @view-tablets {
-    width: 50%;
     margin-bottom: 36px;
+
+    &:nth-child(2n+1) {
+      width: 263px;
+    }
   }
   @media @view-desktop {
     width: 33.33%
@@ -227,6 +287,7 @@ textarea.input-text {
       height: 40px;
       box-sizing: border-box;
       border: 2px solid @color-main_grey;
+      transition: border-color 0.2s ease;
 
       @media @view-tablets {
         width: 54px;
@@ -293,6 +354,7 @@ textarea.input-text {
       height: 40px;
       box-sizing: border-box;
       border: 2px solid @color-main_grey;
+      transition: border-color 0.2s ease;
 
       @media @view-tablets {
         width: 52px;
@@ -345,6 +407,7 @@ textarea.input-text {
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 30px;
+  letter-spacing: 0.35px;
 
   @media @view-tablets {
     margin-bottom: 0;
@@ -356,6 +419,7 @@ textarea.input-text {
 .form_btn {
   background: #fff;
   outline: none;
+  padding: 0 30px;
 
   @media @view-tablets {
     float: left;

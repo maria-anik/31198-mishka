@@ -15,6 +15,13 @@
   box-sizing: border-box;
   padding: 30px 50px;
   text-align: center;
+  opacity: 0;
+  transition: all 0.3s ease;
+
+  &.open {
+    display: block;
+    opacity: 1;
+  }
 
 
   @media @view-tablets {
@@ -37,4 +44,86 @@
 .popup_catalog-text {
   font-size: 17px;
   line-height: 30px;
+}
+
+.popup_close {
+  width: 25px;
+  height: 25px;
+  background: url("@{img-path}/icon-menu-close.svg") no-repeat center;
+  position:absolute;
+  top: -35px;
+  right: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.popup_radio {
+  display: flex;
+  margin: 20px 0 30px;
+}
+.popup_radio-item {
+  margin-right: 7px;
+  position: relative;
+  flex-grow: 1;
+
+
+  &:last-child {
+    margin-right: 0px;
+  }
+
+  label {
+    display: block;
+    height: 52px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid #ececec;
+    line-height: 48px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-color: #c7c7c7;
+    }
+
+    &:active {
+      border-color: #ececec;
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  input:checked+label {
+    border-color: #63d1bb;
+  }
+}
+
+.popup_catalog-btn {
+  border-color: #63d1bb;
+  background: #63d1bb;
+  color: #fff;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: rgba(99,209,187,0.8);
+    background: rgba(99,209,187,0.8);
+    color: #fff;
+  }
+
+  &:active {
+    border-color: rgba(99,209,187,0.5);
+    background: rgba(99,209,187,0.5);
+    color: #fff;
+  }
 }

@@ -1,8 +1,11 @@
 .catalog {
   display: flex;
   flex-direction: column;
+  margin-top: 5px;
 
-
+  @media @view-tablets {
+    margin-top: 10px;
+  }
   @media @view-desktop {
     flex-direction: row;
     flex-wrap: wrap;
@@ -13,6 +16,7 @@
   flex-grow: 1;
   margin-bottom: 30px;
   box-sizing: border-box;
+  transition: all 0.2s ease;
 
   &:hover {
     box-shadow: 0 6px 10px rgba(0,0,0,0.1);
@@ -25,6 +29,7 @@
 
   @media @view-tablets {
     display: flex;
+    margin-bottom: 54px;
   }
 
   @media @view-desktop {
@@ -48,11 +53,12 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    padding: 25px;
   }
 
   @media @view-desktop {
     width: 100%;
-    padding: 25px;
+    padding-bottom: 22px;
     flex-grow: 1;
   }
 }
@@ -84,6 +90,7 @@
   font-weight: 700;
   font-size: 17px;
   margin-bottom: 20px;
+  transition: all 0.2s ease;
 
   &:hover {
     opacity: 0.6;
@@ -96,7 +103,7 @@
   @media @view-tablets {
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
   }
 }
 .catalog_buy {
@@ -107,23 +114,23 @@
 
   @media @view-tablets {
     margin-top: auto;
+    padding-top: 20px;
   }
 }
 .catalog_buy-price {
   margin-right: auto;
   color: @color-black;
   font-weight: 700;
-  padding-top: 20px;
 }
 
 .catalog_buy-basket {
   width: 30px;
   height: 30px;
   padding: 5px;
-  /*background: url(../img/icon-cart.svg) no-repeat center;*/
   fill: #221f1f;
   opacity: 0.2;
   box-sizing: border-box;
+  transition: all 0.2s ease;
 
   svg {
     display: block;
@@ -142,6 +149,6 @@
 
 .catalog_info {
   @media @view-desktop {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
   }
 }
