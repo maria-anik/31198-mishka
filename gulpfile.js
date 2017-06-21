@@ -52,7 +52,7 @@ gulp.task('compress', function() {
             min:'.min.js'
         },
         exclude: ['tasks'],
-        ignoreFiles: [ '-min.js']
+        ignoreFiles: [ '.min.js']
     }))
     .pipe(gulp.dest('js'))
 });
