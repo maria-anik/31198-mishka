@@ -141,10 +141,14 @@
 }
 .form-input_img {
   position: absolute;
-  top: 10px;
+  top: 7px;
   right: 5px;
   fill: #cccccc;
-  background: #f1f1f1;
+
+  @media @view-tablets {
+    top: 10px;
+    background: #f1f1f1;
+  }
 }
 .form-input_name {
   font-size: 17px;

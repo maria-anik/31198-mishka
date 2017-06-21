@@ -1,3 +1,5 @@
+var orderBtnItem;
+
 var classActive = 'open',
     classHide = 'hide';
 
@@ -12,10 +14,10 @@ var header = document.querySelector('.header'),
     map = document.querySelector('#map');
     ;
 
-
 var orderPopup = document.querySelector('.popup_catalog'),
   orderBtn = document.querySelectorAll('.btn-order'),
   orderPopupCloseBtn = document.querySelector('.popup_close'),
+  btnCard = document.querySelector('.popup_catalog-btn')
   body = document.querySelector('body'),
   bodyClassPopup = 'popup';
 
@@ -54,6 +56,11 @@ if (searchBtn) {
   });
 }
 
+if (btnCard) {
+  btnCard.addEventListener('click', function(event) {
+      event.preventDefault();
+});
+}
 
 
 window.onresize = function () {
@@ -72,14 +79,17 @@ window.onresize = function () {
 
 /****** POPUP FUNCTIONALITY *******/
 if (orderBtn && orderPopup) {
-  document.querySelector('.btn-order').addEventListener('click', function (event) {
-    event.preventDefault();
-    event.stopPropagation();
-    console.log('popup open');
-    body.classList.add(bodyClassPopup);
-    orderPopup.classList.add(classActive);
-    return false;
-  });
+  for (var i = 0; i < orderBtn.length; i++) {
+    orderBtn[i].addEventListener('click', function (event) {
+      orderBtnItem = this;
+      event.preventDefault();
+      event.stopPropagation();
+      body.classList.add(bodyClassPopup);
+      orderPopup.classList.add(classActive);
+      return false;
+    })
+  }
+
   orderPopupCloseBtn.addEventListener('click', function () {
     body.classList.remove(bodyClassPopup);
     orderPopup.classList.remove(classActive);
@@ -96,8 +106,7 @@ if (orderBtn && orderPopup) {
       }
 
       // CLOSE POPUP
-      if ((event.target !== orderBtn) && (event.target !== orderPopupCloseBtn) && event.target.closest('.popup_catalog') === null && body.classList.contains(bodyClassPopup)) {
-        console.log('h');
+      if ((event.target !== orderBtnItem) && (event.target !== orderPopupCloseBtn) && event.target.closest('.popup_catalog') === null && body.classList.contains(bodyClassPopup)) {
         body.classList.remove(bodyClassPopup);
         orderPopup.classList.remove(classActive);
       }
@@ -125,11 +134,10 @@ if (map) {
 
       var myPlacemark = new ymaps.Placemark([59.938698, 30.323076] , {},
           { iconLayout: 'default#image',
-            iconImageHref: '../img/icon-map-pin.svg',
+            iconImageHref: './img/icon-map-pin.svg',
             iconImageSize: [70, 100],
             iconImageOffset: [-20, -47] });
 
       myMap.geoObjects.add(myPlacemark);
   }
 }
-
