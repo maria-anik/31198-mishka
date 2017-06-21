@@ -14,6 +14,7 @@ var run = require("run-sequence");
 var del = require("del");
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
+var minify_js = require('gulp-minify');
 
 gulp.task("style", function() {
   gulp.src("less/style.less")
@@ -32,6 +33,28 @@ gulp.task("style", function() {
     .pipe(rename("style.min.css"))
     .pipe(gulp.dest("css"))
     .pipe(server.stream());
+})
+/*
+gulp.task("jsmin", function() {
+  gulp.src("js/script.js")
+  .pipe(minify_js())
+  .pipe(rename(".min.js"))
+  .pipe(gulp.dest("js"))
+});
+*/
+
+
+gulp.task('compress', function() {
+  gulp.src('js/*.js')
+    .pipe(minify_js({
+        ext:{
+            src:'.js',
+            min:'.min.js'
+        },
+        exclude: ['tasks'],
+        ignoreFiles: [ '-min.js']
+    }))
+    .pipe(gulp.dest('js'))
 });
 
 gulp.task("html:copy", function(){
@@ -81,7 +104,7 @@ gulp.task("images", function() {
 
 gulp.task("copy", function(){
   return gulp.src([
-    "fonts/**/*.{woff, woo2}",
+    "fonts/**/*.{woff, woff2}",
     "img/**",
     "js/**",
     "css/**",
@@ -97,5 +120,5 @@ gulp.task("clean", function(){
 })
 
 gulp.task("build", function(fn){
-  run("style", "images", "symbols", "clean", "copy", fn)
+  run("style", "compress", "images", "symbols", "clean", "copy", fn)
 });

@@ -17,6 +17,7 @@ var header = document.querySelector('.header'),
 var orderPopup = document.querySelector('.popup_catalog'),
   orderBtn = document.querySelectorAll('.btn-order'),
   orderPopupCloseBtn = document.querySelector('.popup_close'),
+  btnCard = document.querySelector('.popup_catalog-btn')
   body = document.querySelector('body'),
   bodyClassPopup = 'popup';
 
@@ -55,6 +56,11 @@ if (searchBtn) {
   });
 }
 
+if (btnCard) {
+  btnCard.addEventListener('click', function(event) {
+      event.preventDefault();
+});
+}
 
 
 window.onresize = function () {
