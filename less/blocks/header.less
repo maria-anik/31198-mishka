@@ -3,7 +3,7 @@
   width: 25px;
   height: 25px;
   position: absolute;
-  top: 8px;
+  top: 4px;
   right: 30px;
   background: url("@{img-path}/icon-menu-open.svg") no-repeat center;
   cursor: pointer;
@@ -32,7 +32,7 @@
 .header_top {
   border-top: 1px solid #ececec;
   border-bottom: 1px solid #ececec;
-  padding: 20px 0;
+  padding: 16px 0;
   background: #fff;
 
   &>.container {
@@ -49,7 +49,7 @@
   @media @view-tablets {
     width: 100%;
     position: absolute;
-    top: 107px;
+    top: 103px;
     left: 0;
     display: flex;
   }
@@ -210,6 +210,15 @@
       transition: all 0.2s ease;
     }
 
+    svg {
+        position:absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+
     .basket-img {
       width: 30px;
       height: 30px;
@@ -221,14 +230,7 @@
       opacity: 0.2;
       transition: all 0.2s ease;
 
-      svg {
-        position:absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        margin: auto;
-      }
+
 
       @media @view-tablets {
         position: relative;
@@ -283,7 +285,7 @@
 
     &--logo {
       margin-right: auto;
-      padding: 21px 0;
+      padding: 19px 0;
     }
 
     &--search {
@@ -302,6 +304,11 @@
     &--logo {
       margin-left: 75px;
       padding: 5px 0;
+
+      img {
+        width: 148px;
+        height: 73px;
+      }
     }
 
     &--link {
