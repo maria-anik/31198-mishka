@@ -14,7 +14,7 @@ var run = require("run-sequence");
 var del = require("del");
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
-var minify_js = require('gulp-minify');
+var minify_js = require("gulp-minify");
 
 gulp.task("style", function() {
   gulp.src("less/style.less")
@@ -35,15 +35,15 @@ gulp.task("style", function() {
     .pipe(server.stream());
 })
 
-gulp.task('compress', function() {
-  gulp.src(['js/*.js', '!js/*.min.js'])
+gulp.task("compress", function() {
+  gulp.src(["js/*.js", "!js/*.min.js"])
     .pipe(minify_js({
         ext:{
-            src:'.js',
-            min:'.min.js'
+            src:".js",
+            min:".min.js"
         }
     }))
-    .pipe(gulp.dest('js'))
+    .pipe(gulp.dest("js"))
 });
 
 gulp.task("html:copy", function(){

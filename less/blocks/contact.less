@@ -1,6 +1,10 @@
 .contact {
   padding-top: 50px;
 
+  .main-section_top {
+    margin-bottom: 30px;
+  }
+
   @media @view-tablets {
     padding: 0 0 55px;
   }
@@ -35,7 +39,7 @@
 
     @media @view-desktop {
       right: inherit;
-      top: -6px;
+      top: -9px;
       left: -120px;
     }
 
@@ -54,7 +58,7 @@
   @media @view-desktop {
     flex-direction: column;
     padding-right: 570px;
-    margin: 50px 0 45px;
+    margin: 47px 0 49px;
   }
 }
 .contact-info_item {
@@ -72,7 +76,7 @@
   }
 }
 .contact-info_item-label {
-  flex-basis: 80px;
+  flex-basis: 75px;
   flex-shrink: 0;
 }
 .contact-info_item-text {
@@ -118,18 +122,13 @@
   background-color: #eae6dd;
   position: relative;
 
-  iframe {
-    width: 100% !important;
-    height: 100% !important;
-  }
-
   @media @retina {
       background-image:  url("@{img-path}/map-mobile@2x.jpg");
   }
 
   @media @view-tablets {
     background-image: url("@{img-path}/map-tablet@1x.jpg");
-    margin: 0px -50px 55px;
+    margin: 0px -50px 59px;
   }
 
   @media (min-width: 768px) and (min-resolution: 144dpi),

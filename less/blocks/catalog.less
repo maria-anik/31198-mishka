@@ -45,7 +45,7 @@
   }
 }
 .catalog_item-cont {
-  padding: 30px;
+  padding: 20px 30px 27px;
 
   @media @view-tablets {
     width: 50%;
@@ -89,7 +89,7 @@
   color: @color-black;
   font-weight: 700;
   font-size: 17px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   transition: all 0.2s ease;
 
   &:hover {
@@ -103,14 +103,15 @@
   @media @view-tablets {
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
   }
 }
 .catalog_buy {
-  margin-top: 30px;
+  margin-top: 25px;
   border-top: 1px solid #ededed;
   display: flex;
   align-items: flex-end;
+  padding-top: 15px;
 
   @media @view-tablets {
     margin-top: auto;
@@ -121,16 +122,33 @@
   margin-right: auto;
   color: @color-black;
   font-weight: 700;
+
+  @media @view-tablets {
+    margin-left: 5px;
+  }
+
+  @media @view-desktop {
+    margin-left: 0px;
+  }
 }
 
 .catalog_buy-basket {
-  width: 30px;
+  width: 20px;
   height: 30px;
-  padding: 5px;
+  padding: 5px 0;
   fill: #221f1f;
   opacity: 0.2;
   box-sizing: border-box;
   transition: all 0.2s ease;
+
+  @media @view-tablets {
+    margin-right: 10px;
+  }
+
+  @media @view-desktop {
+    margin-right: 6px;
+    padding-top: 3px;
+  }
 
   svg {
     display: block;
@@ -148,7 +166,16 @@
 }
 
 .catalog_info {
+  font-size: 13px;
+  line-height: 20px;
+
+  @media @view-tablets {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+
   @media @view-desktop {
-    margin-bottom: 13px;
+    margin-bottom: 18px;
   }
 }

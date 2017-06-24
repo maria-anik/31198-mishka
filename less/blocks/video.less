@@ -1,7 +1,6 @@
 .video {
   border: 1px solid #ededed;
   flex-grow: 1;
-  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -13,8 +12,8 @@
   @media @view-tablets {
     margin-top: 450px;
     position: relative;
-    padding-top: 20px;
-    margin-bottom: 10px;
+    padding-top: 37px;
+    margin-bottom: 15px;
   }
 
   @media @view-desktop {
@@ -76,26 +75,38 @@
 
 
 .video_title {
-  padding: 20px 30px;
+  padding: 0px 30px;
   padding-left: 90px;
   font-weight: 700;
   color: @color-black;
   font-size: 17px;
   position: relative;
+  min-height: 96px;
+  display: flex;
+  align-items: center;
 
   &:before {
     content: "";
     width: 35px;
     height: 20px;
     position: absolute;
-    left: 30px;
+    left: 33px;
+    top: 36px;
     background: url("@{img-path}/icon-video.svg") no-repeat center;
   }
 
   @media @view-tablets {
     font-size: 20px;
     line-height: 23px;
-    padding-bottom: 0;
+    padding: 0 40px;
+    padding-left: 105px;
+    min-height: auto;
+
+    &:before {
+      top: 0;
+      left: 40px;
+    }
+
   }
 
   @media @view-desktop {
@@ -108,7 +119,7 @@
   }
 }
 .video_cont {
-  padding: 30px;
+  padding: 27px 34px 34px;
 
   @media @view-tablets {
     padding: 33px 40px 45px;
@@ -119,11 +130,12 @@
   }
 }
 .video_text {
-  margin-bottom: 40px;
-  font-size: 15px;
+  margin-bottom: 25px;
+  font-size: 13px;
 
   @media @view-tablets {
     margin-bottom: 35px;
+    font-size: 15px;
   }
 
   @media @view-desktop {

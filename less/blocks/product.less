@@ -22,10 +22,14 @@
   }
 
   .main-section_top {
-    margin-bottom: 23px;
+    margin-bottom: 25px;
 
     @media @view-tablets {
       margin-bottom: 50px;
+    }
+
+    @media @view-desktop {
+      margin-bottom: 45px;
     }
   }
 
@@ -109,7 +113,7 @@
   }
 
   @media @view-desktop {
-    padding-right: 588px;
+    padding-right: 580px;
   }
 }
 .product_info {
@@ -120,13 +124,15 @@
   }
 
   @media @view-desktop {
-    margin-bottom: 105px;
+    margin-bottom: 108px;
   }
 }
 .product_tb {
   display: flex;
   flex-direction: column;
   margin-top: 20px;
+  font-size: 15px;
+  line-height: 20px;
 
   @media @view-tablets {
     margin-top: 35px;
@@ -138,10 +144,10 @@
 .product_tb-row {
   display: flex;
   border-bottom: 1px solid #ececec;
-  padding: 7px 0;
+  padding: 9px 0;
 
   @media @view-tablets {
-    padding: 5px 0;
+    padding: 10px 0;
   }
 }
 .product_tb-name {
