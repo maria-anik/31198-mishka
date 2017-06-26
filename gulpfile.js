@@ -23,10 +23,7 @@ gulp.task("style", function() {
     .pipe(postcss([
       autoprefixer({browsers: [
         "last 2 versions"
-      ]}),
-      mqpacker({
-        sort: true
-      })
+      ]})
     ]))
     .pipe(gulp.dest("css"))
     .pipe(minify())
@@ -34,7 +31,10 @@ gulp.task("style", function() {
     .pipe(gulp.dest("css"))
     .pipe(server.stream());
 })
-
+/*,
+      mqpacker({
+        sort: true
+      })*/
 gulp.task("compress", function() {
   gulp.src(["js/*.js", "!js/*.min.js"])
     .pipe(minify_js({
